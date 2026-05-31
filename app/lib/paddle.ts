@@ -45,3 +45,13 @@ export function openPaddleCheckout(plan: PaddlePlan, opts: { email?: string } = 
     ...(opts.email ? { customer: { email: opts.email } } : {}),
   })
 }
+
+// Edge Function `create-checkout` 가 만든 Paddle Transaction 으로 결제 오버레이를 연다.
+// 익스텐션·안드로이드는 ?_ptxn=txn_xxx 쿼리만 붙여서 이 페이지로 redirect — 매칭 정보(custom_data) 는
+// transaction 안에 이미 박혀있다.
+export function openPaddleCheckoutByTransaction(transactionId: string) {
+  if (typeof window === 'undefined') return
+  if (!ensureInit()) return
+  const Paddle = (window as { Paddle?: { Checkout: { open: (opts: object) => void } } }).Paddle!
+  Paddle.Checkout.open({ transactionId })
+}

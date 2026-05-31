@@ -57,6 +57,7 @@ type Messages = {
     planLabel: { monthly: string; yearly: string; lifetime: string }
     lifetimeBadge: string  // "초기 이벤트" 등
     yearlyBadge: string    // "17% 할인" 등
+    lifetimePerks: string[]  // 평생권 선택 시만 노출되는 추가 혜택 (예: "모든 미래 업데이트 평생 제공")
     free: { name: string; price: string; period: string; cta: string; items: string[] }
     pro: {
       name: string
@@ -79,6 +80,13 @@ type Messages = {
     chrome: { title: string; description: string; cta: string }
     windows: { title: string; description: string; cta: string }
     android: { title: string; description: string; cta: string }
+    ios: { title: string; description: string; cta: string }
+  }
+  roadmap: {
+    label: string
+    heading: string
+    subheading: string
+    items: { icon: string; title: string; description: string }[]
   }
   finalCta: {
     heading: string
@@ -156,6 +164,11 @@ export const messages: Record<Locale, Messages> = {
         '기본 차단 기능은 무료입니다. 더 강력한 집중이 필요할 때 업그레이드하세요.',
       planLabel: { monthly: '월간', yearly: '연간', lifetime: '평생' },
       lifetimeBadge: '초기 이벤트',
+      lifetimePerks: [
+        '✨ 모든 미래 업데이트 평생 무료',
+        '🔒 가격 인상으로부터 영구 보호',
+        '🪪 초기 후원자 한정 — 출시 후 평생권 판매 종료 예정',
+      ],
       yearlyBadge: '{n}% 할인',
       free: {
         name: '무료',
@@ -203,6 +216,22 @@ export const messages: Record<Locale, Messages> = {
         description: 'Deep Dive 모바일 풀 락 · Pro',
         cta: 'Google Play 에서 받기',
       },
+      ios: {
+        title: 'iOS 앱',
+        description: 'iPhone · iPad 지원 준비 중',
+        cta: '곧 출시 예정',
+      },
+    },
+    roadmap: {
+      label: '추후 공개 예정',
+      heading: '더 깊은 데이터, 더 정직한 자기 이해',
+      subheading: '데이터가 쌓이는 대로 순차 공개합니다.',
+      items: [
+        { icon: '📊', title: '시간대별 집중 패턴', description: '하루 중 가장 잘 몰입하는 시간대를 가시화. 본인만의 리듬을 발견하세요.' },
+        { icon: '🎯', title: '목표별 성취율', description: '입력한 목표 텍스트 기준으로 완주율·평균 지속 시간을 묶어 보여줍니다.' },
+        { icon: '📅', title: '주간 / 월간 리포트', description: '이메일·앱 알림으로 자동 요약 전달. 회고 습관을 자동으로 만들어드립니다.' },
+        { icon: '👥', title: '동기 비교 (옵션)', description: '같은 직군·같은 목표 사용자들과 익명 비교. 자발적 참여만.' },
+      ],
     },
     stats: {
       items: [
@@ -358,6 +387,11 @@ export const messages: Record<Locale, Messages> = {
         'Core blocking is free. Upgrade when you need stronger focus.',
       planLabel: { monthly: 'Monthly', yearly: 'Yearly', lifetime: 'Lifetime' },
       lifetimeBadge: 'Launch deal',
+      lifetimePerks: [
+        '✨ All future updates, free forever',
+        '🔒 Locked in — never affected by price increases',
+        '🪪 Launch backers only — lifetime plan retiring after public launch',
+      ],
       yearlyBadge: 'Save {n}%',
       free: {
         name: 'Free',
@@ -405,6 +439,22 @@ export const messages: Record<Locale, Messages> = {
         description: 'Mobile full lockdown for Deep Dive · Pro',
         cta: 'Get it on Google Play',
       },
+      ios: {
+        title: 'iOS App',
+        description: 'iPhone · iPad support in the works',
+        cta: 'Coming soon',
+      },
+    },
+    roadmap: {
+      label: 'Coming soon',
+      heading: 'Deeper data, more honest self-understanding',
+      subheading: 'Rolling out as data accumulates.',
+      items: [
+        { icon: '📊', title: 'Time-of-day focus patterns', description: 'See when you concentrate best during the day. Discover your own rhythm.' },
+        { icon: '🎯', title: 'Per-goal completion rate', description: 'Grouped by goal text — completion rate and average duration in one view.' },
+        { icon: '📅', title: 'Weekly / Monthly reports', description: 'Auto-summary delivered via email or in-app. Builds a reflection habit for you.' },
+        { icon: '👥', title: 'Peer comparison (opt-in)', description: 'Anonymous comparison with users in the same role / same goal. Strictly opt-in.' },
+      ],
     },
     stats: {
       items: [
@@ -560,6 +610,11 @@ export const messages: Record<Locale, Messages> = {
         '基本のブロック機能は無料です。より強力な集中が必要な時にアップグレードしてください。',
       planLabel: { monthly: '月額', yearly: '年額', lifetime: '永年' },
       lifetimeBadge: 'ローンチ特典',
+      lifetimePerks: [
+        '✨ 今後のすべてのアップデートが永久無料',
+        '🔒 価格改定の影響を受けません',
+        '🪪 ローンチ支援者限定 — 正式リリース後に買い切りプランは終了予定',
+      ],
       yearlyBadge: '{n}% OFF',
       free: {
         name: '無料',
@@ -607,6 +662,22 @@ export const messages: Record<Locale, Messages> = {
         description: 'Deep Dive モバイル完全ロック · Pro',
         cta: 'Google Play で入手',
       },
+      ios: {
+        title: 'iOS アプリ',
+        description: 'iPhone · iPad 対応を準備中',
+        cta: '近日リリース',
+      },
+    },
+    roadmap: {
+      label: '近日公開予定',
+      heading: 'より深いデータ、より誠実な自己理解',
+      subheading: 'データが蓄積され次第、順次公開します。',
+      items: [
+        { icon: '📊', title: '時間帯別の集中パターン', description: '一日の中で最も集中できる時間帯を可視化。あなた自身のリズムを発見できます。' },
+        { icon: '🎯', title: '目標別達成率', description: '入力した目標テキストごとに完走率・平均継続時間をまとめて表示します。' },
+        { icon: '📅', title: '週次 / 月次レポート', description: 'メール・アプリ通知で自動要約をお届け。振り返りの習慣を自動で作ります。' },
+        { icon: '👥', title: '同業者比較 (任意)', description: '同じ職種・同じ目標のユーザーと匿名で比較。希望者のみ参加。' },
+      ],
     },
     stats: {
       items: [
@@ -761,6 +832,11 @@ export const messages: Record<Locale, Messages> = {
       subheading: '核心屏蔽功能免费。需要更强专注时升级。',
       planLabel: { monthly: '月付', yearly: '年付', lifetime: '永久' },
       lifetimeBadge: '上线特惠',
+      lifetimePerks: [
+        '✨ 未来所有更新永久免费',
+        '🔒 永久免受涨价影响',
+        '🪪 仅限上线支持者 — 正式发布后终身计划将下架',
+      ],
       yearlyBadge: '省 {n}%',
       free: {
         name: '免费',
@@ -808,6 +884,22 @@ export const messages: Record<Locale, Messages> = {
         description: 'Deep Dive 移动端完全锁定 · Pro',
         cta: '在 Google Play 获取',
       },
+      ios: {
+        title: 'iOS 应用',
+        description: 'iPhone · iPad 支持开发中',
+        cta: '即将推出',
+      },
+    },
+    roadmap: {
+      label: '即将推出',
+      heading: '更深的数据,更诚实的自我理解',
+      subheading: '随着数据积累将陆续公开。',
+      items: [
+        { icon: '📊', title: '时段专注模式', description: '可视化一天中最专注的时段。发现属于你自己的节奏。' },
+        { icon: '🎯', title: '目标达成率', description: '按输入的目标文本汇总完成率和平均时长。' },
+        { icon: '📅', title: '周报 / 月报', description: '通过邮件或应用通知自动发送摘要。自动养成复盘习惯。' },
+        { icon: '👥', title: '同行对比 (可选)', description: '与相同职业、相同目标的用户匿名对比。仅自愿参与。' },
+      ],
     },
     stats: {
       items: [
@@ -963,6 +1055,11 @@ export const messages: Record<Locale, Messages> = {
         'El bloqueo principal es gratis. Mejora cuando necesites más concentración.',
       planLabel: { monthly: 'Mensual', yearly: 'Anual', lifetime: 'De por vida' },
       lifetimeBadge: 'Oferta de lanzamiento',
+      lifetimePerks: [
+        '✨ Todas las futuras actualizaciones, gratis para siempre',
+        '🔒 Nunca te afectarán las subidas de precio',
+        '🪪 Solo para apoyos de lanzamiento — el plan de por vida se retirará tras el lanzamiento público',
+      ],
       yearlyBadge: 'Ahorra {n}%',
       free: {
         name: 'Gratis',
@@ -1010,6 +1107,22 @@ export const messages: Record<Locale, Messages> = {
         description: 'Bloqueo total móvil para Deep Dive · Pro',
         cta: 'Obtener en Google Play',
       },
+      ios: {
+        title: 'App de iOS',
+        description: 'Soporte para iPhone · iPad en preparación',
+        cta: 'Próximamente',
+      },
+    },
+    roadmap: {
+      label: 'Próximamente',
+      heading: 'Datos más profundos, autoconocimiento más honesto',
+      subheading: 'Se publicará progresivamente a medida que se acumulen datos.',
+      items: [
+        { icon: '📊', title: 'Patrones de concentración por hora', description: 'Visualiza las horas del día en que mejor te concentras. Descubre tu propio ritmo.' },
+        { icon: '🎯', title: 'Tasa de cumplimiento por objetivo', description: 'Agrupado por texto de objetivo: tasa de finalización y duración media en una vista.' },
+        { icon: '📅', title: 'Informes semanales / mensuales', description: 'Resúmenes automáticos por correo o en la app. Construye el hábito de la reflexión.' },
+        { icon: '👥', title: 'Comparación con pares (opcional)', description: 'Comparación anónima con usuarios del mismo rol u objetivo. Solo participación voluntaria.' },
+      ],
     },
     stats: {
       items: [
@@ -1165,6 +1278,11 @@ export const messages: Record<Locale, Messages> = {
         'Grundlegende Blockierung ist kostenlos. Upgrade, wenn du stärkeren Fokus brauchst.',
       planLabel: { monthly: 'Monatlich', yearly: 'Jährlich', lifetime: 'Einmalig' },
       lifetimeBadge: 'Launch-Angebot',
+      lifetimePerks: [
+        '✨ Alle zukünftigen Updates — für immer kostenlos',
+        '🔒 Geschützt vor allen Preiserhöhungen',
+        '🪪 Nur für Launch-Unterstützer — Lifetime-Plan endet nach dem offiziellen Launch',
+      ],
       yearlyBadge: '{n}% sparen',
       free: {
         name: 'Kostenlos',
@@ -1212,6 +1330,22 @@ export const messages: Record<Locale, Messages> = {
         description: 'Mobile Komplettsperre für Deep Dive · Pro',
         cta: 'Bei Google Play laden',
       },
+      ios: {
+        title: 'iOS App',
+        description: 'iPhone · iPad Unterstützung in Vorbereitung',
+        cta: 'Demnächst',
+      },
+    },
+    roadmap: {
+      label: 'Demnächst',
+      heading: 'Tiefere Daten, ehrlicheres Selbstverständnis',
+      subheading: 'Wird schrittweise veröffentlicht, sobald Daten zusammenkommen.',
+      items: [
+        { icon: '📊', title: 'Fokus-Muster nach Tageszeit', description: 'Sieh, wann du dich am besten konzentrierst. Entdecke deinen eigenen Rhythmus.' },
+        { icon: '🎯', title: 'Zielerreichungsrate', description: 'Nach Zieltext gruppiert — Abschlussrate und durchschnittliche Dauer in einer Ansicht.' },
+        { icon: '📅', title: 'Wochen- / Monatsberichte', description: 'Automatische Zusammenfassung per E-Mail oder in der App. Baut dir die Reflexionsgewohnheit auf.' },
+        { icon: '👥', title: 'Peer-Vergleich (Opt-in)', description: 'Anonymer Vergleich mit Nutzern derselben Rolle oder desselben Ziels. Nur freiwillig.' },
+      ],
     },
     stats: {
       items: [

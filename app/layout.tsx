@@ -104,8 +104,11 @@ const softwareSchema = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  // suppressHydrationWarning: 브라우저 확장프로그램이 <html> 에 속성을 박는 경우
+  //   (예: extension-installed="true") hydration mismatch 발생. 정상 동작이라 무시 권장.
+  //   Next.js 공식 권고.
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <head>
         <Script
           id="ld-software"

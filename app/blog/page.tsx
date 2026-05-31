@@ -25,9 +25,28 @@ export default function BlogIndex() {
 
       <section className="max-w-3xl mx-auto px-6 py-16">
         <p className="text-violet-600 font-semibold text-sm uppercase tracking-wider mb-3">Blog</p>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8">
           Dive deeper into focus
         </h1>
+
+        {/* 추후 공개 예정 (통계 다각화) 안내 배너 — 동일 메시지를 stats/메인 페이지에도 노출. */}
+        <Link
+          href="/blog/stats-roadmap"
+          className="group block mb-12 rounded-2xl border border-violet-100 bg-gradient-to-br from-violet-50 to-white px-5 py-4 hover:border-violet-300 transition-colors"
+        >
+          <div className="flex items-start gap-3">
+            <span className="text-xl leading-none mt-0.5">🛠️</span>
+            <div className="flex-1 text-sm leading-relaxed">
+              <p className="font-semibold text-slate-900 mb-0.5">More stats are on the way</p>
+              <p className="text-slate-600">
+                Time-of-day focus patterns · per-goal completion · weekly reports · opt-in peer comparison — rolling out as data accumulates.
+              </p>
+              <span className="inline-flex items-center gap-1 text-violet-600 text-xs font-semibold mt-2 group-hover:gap-2 transition-all">
+                See the honest roadmap →
+              </span>
+            </div>
+          </div>
+        </Link>
 
         {posts.length === 0 ? (
           <p className="text-slate-500">No posts yet.</p>

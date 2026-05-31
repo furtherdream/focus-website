@@ -108,6 +108,18 @@ export default function StatsPage() {
       <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">내 집중 통계</h1>
       <p className="text-sm text-slate-500 mb-8">최근 90일 데이터</p>
 
+      {/* 추후 공개 예정 — 데이터 누적 + 분석 지표 다각화 안내. 로그인한 사용자에게만 노출. */}
+      <div className="mb-8 rounded-2xl border border-violet-100 bg-gradient-to-br from-violet-50 to-white px-5 py-4 flex items-start gap-3">
+        <span className="text-xl leading-none mt-0.5">🛠️</span>
+        <div className="text-sm leading-relaxed">
+          <p className="font-semibold text-slate-900 mb-0.5">곧 더 깊은 지표가 추가됩니다</p>
+          <p className="text-slate-600">
+            시간대별 집중력 패턴 · 주간 / 월간 리포트 · 목표별 성취율 · 동기 비교 (옵션) 등
+            데이터가 쌓이는 대로 순차 공개됩니다.
+          </p>
+        </div>
+      </div>
+
       <StatsDashboard />
     </main>
   )

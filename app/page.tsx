@@ -106,8 +106,9 @@ export default function Home() {
           </nav>
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
+            {/* 메인 CTA — 익스텐션이 여러 플랫폼 중 하나라 #download 로 보내 선택지 4개 모두 노출. */}
             <a
-              href={CHROME_STORE_URL}
+              href="#download"
               className="hidden md:inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-slate-900 text-sm font-semibold px-5 py-2.5 rounded-full transition-colors"
             >
               {t.nav.cta}
@@ -251,6 +252,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── 추후 공개 예정 (통계 다각화 로드맵) ──────────────── */}
+      <section id="roadmap" className="py-24 md:py-32 bg-slate-50">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-14 md:mb-16">
+            <p className="text-violet-600 font-semibold text-sm uppercase tracking-wider mb-3">{t.roadmap.label}</p>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">{t.roadmap.heading}</h2>
+            <p className="text-slate-500 text-lg">{t.roadmap.subheading}</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {t.roadmap.items.map((it) => (
+              <div
+                key={it.title}
+                className="relative bg-white border border-slate-200 rounded-3xl p-7"
+              >
+                <span className="absolute top-4 right-4 text-[10px] uppercase tracking-wider font-semibold text-violet-600 bg-violet-50 border border-violet-100 rounded-full px-2 py-0.5">
+                  {t.roadmap.label}
+                </span>
+                <div className="text-3xl mb-4">{it.icon}</div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{it.title}</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">{it.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 가격 ─────────────────────────────────────────── */}
       <section id="pricing" className="py-24 md:py-32 bg-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -330,6 +357,14 @@ export default function Home() {
                     </span>
                   )}
                 </div>
+                {/* 평생권 선택 시만 노출되는 차별화 혜택 — 업데이트 영구·가격 인상 차단·런치 한정 */}
+                {proPlan === 'lifetime' && (
+                  <ul className="mb-6 space-y-2 rounded-2xl border border-amber-300/30 bg-amber-400/5 p-4">
+                    {t.pricing.lifetimePerks.map((perk) => (
+                      <li key={perk} className="text-sm text-amber-100 leading-relaxed">{perk}</li>
+                    ))}
+                  </ul>
+                )}
                 <button
                   type="button"
                   onClick={() => openPaddleCheckout(proPlan)}
@@ -396,7 +431,7 @@ export default function Home() {
             <p className="text-slate-500 text-lg">{t.download.subheading}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
             <a
               href={CHROME_STORE_URL}
               className="group bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:border-violet-300 rounded-3xl p-8 text-left card-hover"
@@ -433,6 +468,21 @@ export default function Home() {
                 <ArrowRight />
               </div>
             </a>
+            {/* iOS — 출시 전. 클릭 비활성, 디자인은 grayscale 로 약화. */}
+            <div
+              aria-disabled
+              className="relative bg-gradient-to-br from-slate-50 to-white border border-slate-200 rounded-3xl p-8 text-left opacity-70 cursor-not-allowed"
+            >
+              <span className="absolute top-4 right-4 text-[10px] uppercase tracking-wider font-semibold text-violet-600 bg-violet-50 border border-violet-100 rounded-full px-2 py-0.5">
+                Coming soon
+              </span>
+              <div className="text-4xl mb-5 grayscale">🍎</div>
+              <p className="font-bold text-lg text-slate-900 mb-1">{t.download.ios.title}</p>
+              <p className="text-slate-500 text-sm mb-5">{t.download.ios.description}</p>
+              <div className="flex items-center gap-2 text-slate-400 text-sm font-semibold">
+                {t.download.ios.cta}
+              </div>
+            </div>
           </div>
         </div>
       </section>

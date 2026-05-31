@@ -13,7 +13,7 @@ import {
   currencyFromIp,
   type Currency,
 } from '../i18n/currency'
-import { openPaddleCheckout } from '../lib/paddle'
+import { openPaddleCheckout, openPaddleCheckoutByTransaction } from '../lib/paddle'
 
 const CHROME_STORE_URL = '#'
 const SUPPORT_EMAIL = 'support@flowdive.app'
@@ -50,9 +50,33 @@ export default function PricingPage() {
   const [proPlan, setProPlan] = useState<'monthly' | 'yearly' | 'lifetime'>('monthly')
   // 통화 — timezone 즉시 적용 + IP 결과로 정정
   const [currency, setCurrency] = useState<Currency>('USD')
+  // ?email=<user@x> — 앱에서 redirect 시 자기 계정 이메일 prefill.
+  // Paddle checkout 이 이 이메일을 받아 자동 채움 → 잘못된 이메일로 구독 → orphan 방지.
+  const [prefilledEmail, setPrefilledEmail] = useState<string | undefined>(undefined)
   useEffect(() => {
     setCurrency(currencyFromTimezone())
     currencyFromIp().then((c) => { if (c) setCurrency(c) })
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const e = params.get('email')
+      if (e) setPrefilledEmail(e)
+      // 익스텐션·안드로이드는 Edge Function 으로 Paddle Transaction 을 먼저 만들고
+      //   ?_ptxn=txn_xxx 쿼리로 이 페이지에 redirect. transaction 안에 custom_data.supabase_user_id
+      //   가 박혀있어 webhook 이 100% 사용자 매칭. Paddle.js 로드 대기 후 자동 결제창 오픈.
+      const ptxn = params.get('_ptxn')
+      if (ptxn) {
+        let tries = 0
+        const tick = setInterval(() => {
+          const Paddle = (window as { Paddle?: unknown }).Paddle
+          if (Paddle) {
+            clearInterval(tick)
+            openPaddleCheckoutByTransaction(ptxn)
+          } else if (++tries > 50) {
+            clearInterval(tick)
+          }
+        }, 100)
+      }
+    }
   }, [])
   const prices = PRICES_BY_CURRENCY[currency]
 
@@ -150,9 +174,17 @@ export default function PricingPage() {
                     </span>
                   )}
                 </div>
+                {/* 평생권 선택 시만 노출되는 차별화 혜택 */}
+                {proPlan === 'lifetime' && (
+                  <ul className="mb-6 space-y-2 rounded-2xl border border-amber-300/30 bg-amber-400/5 p-4">
+                    {t.pricing.lifetimePerks.map((perk) => (
+                      <li key={perk} className="text-sm text-amber-100 leading-relaxed">{perk}</li>
+                    ))}
+                  </ul>
+                )}
                 <button
                   type="button"
-                  onClick={() => openPaddleCheckout(proPlan)}
+                  onClick={() => openPaddleCheckout(proPlan, { email: prefilledEmail })}
                   className="block w-full text-center bg-white hover:bg-slate-100 text-slate-900 font-semibold py-3.5 rounded-full transition-colors text-sm mb-8"
                 >
                   {t.pricing.pro.cta}
