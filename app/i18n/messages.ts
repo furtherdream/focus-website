@@ -189,7 +189,7 @@ export const messages: Record<Locale, Messages> = {
         items: [
           '무료 플랜의 모든 기능',
           'Deep Dive (시간 제한 잠금)',
-          'Windows / macOS / Android 풀 락',
+          'Windows / macOS / Android 완전 잠금',
           '앱 레벨 차단 (SNS, 게임 등)',
           '멀티 기기 실시간 동기화',
         ],
