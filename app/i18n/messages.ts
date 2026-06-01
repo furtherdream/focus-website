@@ -110,49 +110,49 @@ export const messages: Record<Locale, Messages> = {
     },
     hero: {
       badge: 'Chrome 확장 + 데스크탑 + Android',
-      title: '무의식적인 방문이\n집중을 깨뜨립니다',
+      title: '숨 참고 FLOW DIVE\n몰입으로의 깊은 잠수',
       subtitle:
-        '일해야 할 시간에 무심코 Instagram 을 열고 있나요?\nFlowdive 이 그 순간을 막고, 목표를 상기시켜드립니다.',
+        '수많은 SNS, 게임, 커뮤니티의 알림들.\n단 한 번의 클릭으로 몰입의 가능성이 깨져버립니다.\nFlowdive가 그 순간을 막고, 목표를 상기시켜드립니다.',
       ctaPrimary: 'Chrome에 무료로 추가하기',
       ctaSecondary: '데스크탑 앱 다운로드',
       ctaTertiary: 'Android 앱 받기',
       blockPage: {
-        headline: '지금은 집중 시간이에요',
+        headline: '지금은 몰입하는 시간이에요',
         currentGoal: '현재 목표',
-        sampleGoal: '논문 3장 쓰기',
+        sampleGoal: '보고서 만들기',
         timer: '42분째 집중 중',
       },
     },
     features: {
       label: '기능 소개',
-      heading: '의지력이 아닌 환경으로 집중하세요',
+      heading: '의지력의 총량은 정해져 있습니다.\n주변 환경에 의지력을 빼앗기지 마세요.',
       subheading:
-        'Flowdive은 무의식적인 방문을 물리적으로 차단해 집중할 수밖에 없는 환경을 만들어드립니다.',
+        'Flowdive는 무의식적인 방문을 물리적으로 차단해 몰입할 수밖에 없는 환경을 만들어드립니다.',
       items: [
         {
           icon: '🚫',
           title: '사이트 차단',
           description:
-            'Twitter, Netflix, Instagram 등 집중을 방해하는 사이트를 차단 리스트에 추가하세요. 집중 모드 중에는 접근이 차단됩니다.',
+            'SNS, 각종 커뮤니티 등 집중을 방해하는 사이트를 차단 리스트에 추가하세요. 집중 모드 중에는 접근이 차단됩니다.',
         },
         {
           icon: '🎯',
           title: '목표 설정',
           description:
-            '집중할 목표를 입력하면 차단 페이지에서 목표를 상기시켜드립니다. 무의식적인 방문을 의식적인 선택으로 바꿔드립니다.',
+            '집중할 목표를 입력하면 차단 페이지에서 목표를 상기시켜드립니다. 무의식적인 방문을 목표 재확인의 기회로 바꿔드립니다.',
         },
         {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            '입력한 시간 동안은 집중 모드를 종료할 수 없습니다. 미래의 내가 우회하려 할 때를 막아주는 강력한 잠금 기능입니다.',
+            '입력한 시간 동안은 집중 모드를 종료할 수 없습니다. 더 깊은 몰입의 상황을 만들어주는 강력한 잠금 기능입니다.',
           badge: 'Pro',
         },
         {
           icon: '💻',
           title: '크로스 플랫폼',
           description:
-            'Chrome 확장으로 브라우저를 제어하고, Windows 데스크탑 앱으로 브라우저 외의 앱까지 차단하세요. 하나의 계정으로 연동됩니다.',
+            '폰으로 Deep Dive 모드를 실행해 보세요. 같은 계정의 데스크탑 앱으로 브라우저와 프로그램까지 차단합니다. **방해되는 앱을 잠그면, 나의 가능성은 잠금 해제됩니다.**',
           badge: 'Pro',
         },
       ],
@@ -165,9 +165,9 @@ export const messages: Record<Locale, Messages> = {
       planLabel: { monthly: '월간', yearly: '연간', lifetime: '평생' },
       lifetimeBadge: '초기 이벤트',
       lifetimePerks: [
-        '✨ 모든 미래 업데이트 평생 무료',
+        '✨ 모든 업데이트 평생 무료',
         '🔒 가격 인상으로부터 영구 보호',
-        '🪪 초기 후원자 한정 — 출시 후 평생권 판매 종료 예정',
+        '🪪 초기 후원자 한정 — 일정 회원 도달 후 판매 종료 예정',
       ],
       yearlyBadge: '{n}% 할인',
       free: {
@@ -190,7 +190,7 @@ export const messages: Record<Locale, Messages> = {
           '무료 플랜의 모든 기능',
           'Deep Dive (시간 제한 잠금)',
           'Windows / macOS / Android 풀 락',
-          '앱 레벨 차단 (카카오톡, 게임 등)',
+          '앱 레벨 차단 (SNS, 게임 등)',
           '멀티 기기 실시간 동기화',
         ],
         monthly: { price: '₩6,900', period: '/월' },
@@ -213,7 +213,7 @@ export const messages: Record<Locale, Messages> = {
       },
       android: {
         title: 'Android 앱',
-        description: 'Deep Dive 모바일 풀 락 · Pro',
+        description: 'Deep Dive 모바일 완전 잠금 · Pro',
         cta: 'Google Play 에서 받기',
       },
       ios: {
@@ -224,12 +224,12 @@ export const messages: Record<Locale, Messages> = {
     },
     roadmap: {
       label: '추후 공개 예정',
-      heading: '더 깊은 데이터, 더 정직한 자기 이해',
+      heading: '더 깊은 데이터,\n더 무한한 나의 가능성 맞이하기',
       subheading: '데이터가 쌓이는 대로 순차 공개합니다.',
       items: [
         { icon: '📊', title: '시간대별 집중 패턴', description: '하루 중 가장 잘 몰입하는 시간대를 가시화. 본인만의 리듬을 발견하세요.' },
         { icon: '🎯', title: '목표별 성취율', description: '입력한 목표 텍스트 기준으로 완주율·평균 지속 시간을 묶어 보여줍니다.' },
-        { icon: '📅', title: '주간 / 월간 리포트', description: '이메일·앱 알림으로 자동 요약 전달. 회고 습관을 자동으로 만들어드립니다.' },
+        { icon: '📅', title: '주간 / 월간 리포트', description: '모바일 앱으로 자동 요약 전달. 회고 습관을 자동으로 만들어드립니다.' },
         { icon: '👥', title: '동기 비교 (옵션)', description: '같은 직군·같은 목표 사용자들과 익명 비교. 자발적 참여만.' },
       ],
     },
@@ -237,7 +237,7 @@ export const messages: Record<Locale, Messages> = {
       items: [
         { number: '12,000+', label: '집중을 시작한 사용자' },
         { number: '4.2M', label: '차단된 방해 사이트 접근' },
-        { number: '38,000+', label: '시간의 집중 시간' },
+        { number: '38,000+', label: '누적 집중 시간' },
         { number: '4.8 ★', label: '평균 사용자 평점' },
       ],
     },
@@ -254,7 +254,7 @@ export const messages: Record<Locale, Messages> = {
         {
           number: '02',
           title: '방해 요소를 등록',
-          description: 'Instagram, 인스타그램, 게임 — 무엇이든 차단 리스트에 추가하세요.',
+          description: 'SNS, 게임, 커뮤니티, OTT 등 — 무엇이든 차단 리스트에 추가하세요.',
         },
         {
           number: '03',
@@ -302,7 +302,7 @@ export const messages: Record<Locale, Messages> = {
         },
         {
           question: '여러 기기를 동시에 쓸 수 있나요?',
-          answer: '하나의 계정으로 Chrome 확장과 Windows 앱을 모두 사용할 수 있습니다. 차단 리스트는 자동 동기화됩니다.',
+          answer: '하나의 계정으로 Chrome 확장과 Windows 앱을 모두 사용할 수 있습니다. Pro 플랜을 이용하시면 차단 리스트가 자동 동기화됩니다.',
         },
         {
           question: '데이터는 어디에 저장되나요?',
@@ -312,7 +312,7 @@ export const messages: Record<Locale, Messages> = {
     },
     finalCta: {
       heading: '오늘부터 집중하세요',
-      subheading: '의지가 약해서가 아닙니다. 환경이 그렇게 만들어진 거예요. Flowdive이 그 환경을 바꿔드립니다.',
+      subheading: '내 의지가 약해서가 아닙니다. 환경이 그렇게 만드는 거예요. 몰입의 환경으로 Dive!',
       ctaPrimary: 'Chrome에 무료로 추가',
       ctaSecondary: '데스크탑 앱 다운로드',
       ctaTertiary: 'Android 앱 받기',
@@ -333,22 +333,22 @@ export const messages: Record<Locale, Messages> = {
     },
     hero: {
       badge: 'Chrome Extension + Desktop + Android',
-      title: 'Mindless browsing\nbreaks your focus',
+      title: 'Dive into flow.\nDeep dive into work.',
       subtitle:
-        'Do you find yourself opening Instagram without thinking?\nFlowdive blocks that moment and reminds you of your goal.',
+        'Endless notifications from social, games, and communities.\nA single click breaks your shot at deep focus.\nFlowdive blocks that moment and reminds you of your goal.',
       ctaPrimary: 'Add to Chrome — Free',
       ctaSecondary: 'Download desktop app',
       ctaTertiary: 'Get Android app',
       blockPage: {
         headline: 'Time to dive into FLOW',
         currentGoal: 'Current Goal',
-        sampleGoal: 'Write chapter 3 of thesis',
+        sampleGoal: 'Finish the report',
         timer: 'Focused for 42 min',
       },
     },
     features: {
       label: 'Features',
-      heading: 'Focus through environment, not willpower',
+      heading: 'Your willpower is a finite resource.\nDon\'t let your environment drain it.',
       subheading:
         'Flowdive physically blocks mindless visits so you have no choice but to stay focused.',
       items: [
@@ -356,26 +356,26 @@ export const messages: Record<Locale, Messages> = {
           icon: '🚫',
           title: 'Site Blocking',
           description:
-            'Add distracting sites like Twitter, Netflix, or Instagram to your block list. During focus mode, access is blocked and redirected.',
+            'Add social media, forums, and any distracting sites to your block list. Access is cut off during focus mode.',
         },
         {
           icon: '🎯',
           title: 'Goal Setting',
           description:
-            'Enter what you need to do. The blocked page shows your goal, turning a mindless visit into a conscious choice.',
+            'Write down what you\'re focusing on. The blocked page surfaces it — every mindless visit becomes a chance to re-anchor your goal.',
         },
         {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            "During the set time, focus mode cannot be stopped. It stops your future self from giving up when tempted.",
+            'Focus mode can\'t be stopped during the set time. A strong lock that engineers deeper flow.',
           badge: 'Pro',
         },
         {
           icon: '💻',
           title: 'Cross-Platform',
           description:
-            'Control your browser with the Chrome extension and block non-browser apps with the Windows desktop app — one account, synced.',
+            'Start Deep Dive on your phone. The desktop app on the same account blocks browsers and programs too. **Lock yourself in. Unlock your potential.**',
           badge: 'Pro',
         },
       ],
@@ -390,7 +390,7 @@ export const messages: Record<Locale, Messages> = {
       lifetimePerks: [
         '✨ All future updates, free forever',
         '🔒 Locked in — never affected by price increases',
-        '🪪 Launch backers only — lifetime plan retiring after public launch',
+        '🪪 Launch backers only — limited spots, retiring once filled',
       ],
       yearlyBadge: 'Save {n}%',
       free: {
@@ -447,7 +447,7 @@ export const messages: Record<Locale, Messages> = {
     },
     roadmap: {
       label: 'Coming soon',
-      heading: 'Deeper data, more honest self-understanding',
+      heading: 'Deeper data.\nDeeper potential.',
       subheading: 'Rolling out as data accumulates.',
       items: [
         { icon: '📊', title: 'Time-of-day focus patterns', description: 'See when you concentrate best during the day. Discover your own rhythm.' },
@@ -556,49 +556,49 @@ export const messages: Record<Locale, Messages> = {
     },
     hero: {
       badge: 'Chrome拡張 + デスクトップ + Android',
-      title: '無意識な訪問が\n集中を妨げます',
+      title: '深く息を吸って FLOW DIVE\n没入への深い潜水',
       subtitle:
-        '仕事の時間に何気なくInstagramを開いていませんか？\nFlowdiveがその瞬間を防ぎ、目標を思い出させます。',
+        '無数のSNS、ゲーム、コミュニティの通知。\nたった一度のクリックで、没入の可能性が壊れてしまいます。\nFlowdiveがその瞬間を阻止し、目標を思い出させてくれます。',
       ctaPrimary: 'Chromeに無料で追加',
       ctaSecondary: 'デスクトップアプリをダウンロード',
       ctaTertiary: 'Androidアプリを入手',
       blockPage: {
-        headline: '今は集中時間です',
+        headline: '今は没入する時間です',
         currentGoal: '現在の目標',
-        sampleGoal: '論文の第3章を書く',
+        sampleGoal: 'レポート作成',
         timer: '42分間集中中',
       },
     },
     features: {
       label: '機能紹介',
-      heading: '意志ではなく環境で集中しよう',
+      heading: '意志力の総量は決まっています\n環境に意志力を奪われないように',
       subheading:
-        'Flowdiveは無意識な訪問を物理的にブロックし、集中せざるを得ない環境を作ります。',
+        'Flowdiveは無意識な訪問を物理的に遮断し、没入せざるを得ない環境を作り上げます。',
       items: [
         {
           icon: '🚫',
           title: 'サイトブロック',
           description:
-            'Twitter、Netflix、Instagramなど集中を妨げるサイトをブロックリストに追加しましょう。集中モード中はアクセスが遮断されます。',
+            'SNS、各種コミュニティなど集中を妨げるサイトをブロックリストに追加。集中モード中はアクセスが遮断されます。',
         },
         {
           icon: '🎯',
           title: '目標設定',
           description:
-            '集中する目標を入力すると、ブロックページで目標を思い出させます。無意識な訪問を意識的な選択に変えます。',
+            '集中する目標を入力すると、ブロックページで目標を思い出させます。無意識な訪問を、目標再確認の機会に変えてくれます。',
         },
         {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            '設定した時間中は集中モードを終了できません。未来の自分が回避しようとする瞬間を防ぐ強力なロック機能です。',
+            '入力した時間中は集中モードを終了できません。より深い没入の状況を作り出す強力なロック機能です。',
           badge: 'Pro',
         },
         {
           icon: '💻',
           title: 'クロスプラットフォーム',
           description:
-            'Chrome拡張でブラウザを制御し、Windowsデスクトップアプリでブラウザ以外のアプリも遮断。1つのアカウントで連携します。',
+            'スマホでDeep Diveモードを始めてみてください。同じアカウントのデスクトップアプリでブラウザもプログラムも遮断します。**邪魔なアプリをロックすれば、あなたの可能性は解き放たれます。**',
           badge: 'Pro',
         },
       ],
@@ -611,9 +611,9 @@ export const messages: Record<Locale, Messages> = {
       planLabel: { monthly: '月額', yearly: '年額', lifetime: '永年' },
       lifetimeBadge: 'ローンチ特典',
       lifetimePerks: [
-        '✨ 今後のすべてのアップデートが永久無料',
-        '🔒 価格改定の影響を受けません',
-        '🪪 ローンチ支援者限定 — 正式リリース後に買い切りプランは終了予定',
+        '✨ すべてのアップデートを永久に無料',
+        '🔒 価格改定の影響を永続的に受けません',
+        '🪪 初期支援者限定 — 一定数の会員到達後に販売終了予定',
       ],
       yearlyBadge: '{n}% OFF',
       free: {
@@ -670,12 +670,12 @@ export const messages: Record<Locale, Messages> = {
     },
     roadmap: {
       label: '近日公開予定',
-      heading: 'より深いデータ、より誠実な自己理解',
+      heading: 'より深いデータ、より無限大の私の可能性へ',
       subheading: 'データが蓄積され次第、順次公開します。',
       items: [
         { icon: '📊', title: '時間帯別の集中パターン', description: '一日の中で最も集中できる時間帯を可視化。あなた自身のリズムを発見できます。' },
         { icon: '🎯', title: '目標別達成率', description: '入力した目標テキストごとに完走率・平均継続時間をまとめて表示します。' },
-        { icon: '📅', title: '週次 / 月次レポート', description: 'メール・アプリ通知で自動要約をお届け。振り返りの習慣を自動で作ります。' },
+        { icon: '📅', title: '週次 / 月次レポート', description: 'モバイルアプリで自動要約をお届け。振り返りの習慣を自動で作ります。' },
         { icon: '👥', title: '同業者比較 (任意)', description: '同じ職種・同じ目標のユーザーと匿名で比較。希望者のみ参加。' },
       ],
     },
@@ -683,7 +683,7 @@ export const messages: Record<Locale, Messages> = {
       items: [
         { number: '12,000+', label: '集中を始めたユーザー' },
         { number: '4.2M', label: 'ブロックされた妨害アクセス' },
-        { number: '38,000+', label: '時間の集中時間' },
+        { number: '38,000+', label: '累積集中時間' },
         { number: '4.8 ★', label: '平均ユーザー評価' },
       ],
     },
@@ -779,49 +779,49 @@ export const messages: Record<Locale, Messages> = {
     },
     hero: {
       badge: 'Chrome 扩展 + 桌面 + Android',
-      title: '无意识的浏览\n打断你的专注',
+      title: '潜入心流\n深潜你的工作',
       subtitle:
-        '工作时间会不自觉地打开Instagram吗？\nFlowdive会阻止那一刻，并提醒你的目标。',
+        '社交、游戏、社区的无尽通知。\n单击一下,深度专注就被打破。\nFlowdive 阻止那一刻,提醒你的目标。',
       ctaPrimary: '免费添加到Chrome',
       ctaSecondary: '下载桌面应用',
       ctaTertiary: '获取 Android 应用',
       blockPage: {
-        headline: '现在是专注时间',
+        headline: '现在是潜入心流的时间',
         currentGoal: '当前目标',
-        sampleGoal: '撰写论文第3章',
+        sampleGoal: '完成报告',
         timer: '已专注42分钟',
       },
     },
     features: {
       label: '功能介绍',
-      heading: '用环境而非意志力来专注',
+      heading: '意志力是有限的资源\n别让环境耗尽它',
       subheading:
-        'Flowdive在物理层面阻止无意识访问，让你不得不保持专注。',
+        'Flowdive 物理屏蔽无意识访问,让你别无选择,只能保持专注。',
       items: [
         {
           icon: '🚫',
           title: '网站屏蔽',
           description:
-            '将Twitter、Netflix、Instagram等干扰性网站添加到屏蔽列表。专注模式期间访问将被阻止。',
+            '将社交媒体、论坛和任何分心网站添加到屏蔽列表。专注模式期间访问被切断。',
         },
         {
           icon: '🎯',
           title: '目标设定',
           description:
-            '输入需要专注的目标，屏蔽页面会提醒你。把无意识的访问变成有意识的选择。',
+            '写下你正在专注的事情。屏蔽页面会显示它 — 每次无意识访问都成为重新锚定目标的机会。',
         },
         {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            '在设定的时间内无法退出专注模式。这是一项强大的锁定功能，能阻止未来想要绕过的自己。',
+            '设定时间内无法停止专注模式。一种强大的锁定,设计更深层的心流。',
           badge: 'Pro',
         },
         {
           icon: '💻',
           title: '跨平台',
           description:
-            '用Chrome扩展控制浏览器，用Windows桌面应用屏蔽浏览器之外的应用。一个账户同步。',
+            '在手机上启动 Deep Dive。同一账户的桌面应用也屏蔽浏览器和程序。**锁住自己。解锁你的潜能。**',
           badge: 'Pro',
         },
       ],
@@ -835,7 +835,7 @@ export const messages: Record<Locale, Messages> = {
       lifetimePerks: [
         '✨ 未来所有更新永久免费',
         '🔒 永久免受涨价影响',
-        '🪪 仅限上线支持者 — 正式发布后终身计划将下架',
+        '🪪 仅限上线支持者 — 名额有限,售完即止',
       ],
       yearlyBadge: '省 {n}%',
       free: {
@@ -892,12 +892,12 @@ export const messages: Record<Locale, Messages> = {
     },
     roadmap: {
       label: '即将推出',
-      heading: '更深的数据,更诚实的自我理解',
+      heading: '更深的数据。更深的潜能。',
       subheading: '随着数据积累将陆续公开。',
       items: [
         { icon: '📊', title: '时段专注模式', description: '可视化一天中最专注的时段。发现属于你自己的节奏。' },
         { icon: '🎯', title: '目标达成率', description: '按输入的目标文本汇总完成率和平均时长。' },
-        { icon: '📅', title: '周报 / 月报', description: '通过邮件或应用通知自动发送摘要。自动养成复盘习惯。' },
+        { icon: '📅', title: '周报 / 月报', description: '通过移动应用自动发送摘要。自动养成复盘习惯。' },
         { icon: '👥', title: '同行对比 (可选)', description: '与相同职业、相同目标的用户匿名对比。仅自愿参与。' },
       ],
     },
@@ -905,7 +905,7 @@ export const messages: Record<Locale, Messages> = {
       items: [
         { number: '12,000+', label: '开始专注的用户' },
         { number: '4.2M', label: '已屏蔽的干扰访问' },
-        { number: '38,000+', label: '小时专注时间' },
+        { number: '38,000+', label: '累计专注时间' },
         { number: '4.8 ★', label: '平均用户评分' },
       ],
     },
@@ -1001,22 +1001,22 @@ export const messages: Record<Locale, Messages> = {
     },
     hero: {
       badge: 'Extensión de Chrome + Escritorio + Android',
-      title: 'La navegación inconsciente\nrompe tu concentración',
+      title: 'Sumérgete en el flow.\nBucea profundo en tu trabajo.',
       subtitle:
-        '¿Te encuentras abriendo Instagram sin pensar?\nFlowdive detiene ese momento y te recuerda tu objetivo.',
+        'Notificaciones sin fin de redes, juegos y comunidades.\nUn solo clic rompe tu oportunidad de concentración profunda.\nFlowdive bloquea ese momento y te recuerda tu objetivo.',
       ctaPrimary: 'Añadir a Chrome — Gratis',
       ctaSecondary: 'Descargar app de escritorio',
       ctaTertiary: 'Obtener app de Android',
       blockPage: {
-        headline: 'Hora de concentrarse',
+        headline: 'Es hora de entrar en el flow',
         currentGoal: 'Objetivo actual',
-        sampleGoal: 'Escribir el capítulo 3 de la tesis',
+        sampleGoal: 'Terminar el informe',
         timer: 'Concentrado 42 min',
       },
     },
     features: {
       label: 'Funciones',
-      heading: 'Concéntrate por entorno, no por fuerza de voluntad',
+      heading: 'Tu fuerza de voluntad es un recurso finito\nNo dejes que tu entorno la consuma',
       subheading:
         'Flowdive bloquea físicamente las visitas inconscientes para que no tengas más opción que mantenerte concentrado.',
       items: [
@@ -1024,26 +1024,26 @@ export const messages: Record<Locale, Messages> = {
           icon: '🚫',
           title: 'Bloqueo de sitios',
           description:
-            'Añade sitios distractores como Instagram, Netflix o Instagram a tu lista de bloqueo. Durante el modo de concentración, el acceso se bloquea.',
+            'Agrega redes sociales, foros y cualquier sitio distractor a tu lista de bloqueo. El acceso queda cortado durante el modo de concentración.',
         },
         {
           icon: '🎯',
           title: 'Definir objetivo',
           description:
-            'Escribe lo que necesitas hacer. La página bloqueada muestra tu objetivo, convirtiendo una visita inconsciente en una elección consciente.',
+            'Escribe en qué te estás concentrando. La página bloqueada lo muestra — cada visita inconsciente se vuelve una oportunidad de reanclar tu objetivo.',
         },
         {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            'Durante el tiempo establecido, el modo de concentración no se puede detener. Detiene a tu yo futuro cuando quiere rendirse ante la tentación.',
+            'El modo de concentración no se puede detener durante el tiempo establecido. Un bloqueo fuerte que diseña un flow más profundo.',
           badge: 'Pro',
         },
         {
           icon: '💻',
           title: 'Multiplataforma',
           description:
-            'Controla tu navegador con la extensión de Chrome y bloquea apps no navegadoras con la app de escritorio Windows — una cuenta, sincronizada.',
+            'Inicia Deep Dive en tu teléfono. La app de escritorio en la misma cuenta también bloquea navegadores y programas. **Enciérrate. Libera tu potencial.**',
           badge: 'Pro',
         },
       ],
@@ -1057,8 +1057,8 @@ export const messages: Record<Locale, Messages> = {
       lifetimeBadge: 'Oferta de lanzamiento',
       lifetimePerks: [
         '✨ Todas las futuras actualizaciones, gratis para siempre',
-        '🔒 Nunca te afectarán las subidas de precio',
-        '🪪 Solo para apoyos de lanzamiento — el plan de por vida se retirará tras el lanzamiento público',
+        '🔒 Bloqueado — nunca afectado por subidas de precio',
+        '🪪 Solo apoyos de lanzamiento — plazas limitadas, se retira al llenarse',
       ],
       yearlyBadge: 'Ahorra {n}%',
       free: {
@@ -1115,12 +1115,12 @@ export const messages: Record<Locale, Messages> = {
     },
     roadmap: {
       label: 'Próximamente',
-      heading: 'Datos más profundos, autoconocimiento más honesto',
+      heading: 'Datos más profundos. Potencial más profundo.',
       subheading: 'Se publicará progresivamente a medida que se acumulen datos.',
       items: [
         { icon: '📊', title: 'Patrones de concentración por hora', description: 'Visualiza las horas del día en que mejor te concentras. Descubre tu propio ritmo.' },
         { icon: '🎯', title: 'Tasa de cumplimiento por objetivo', description: 'Agrupado por texto de objetivo: tasa de finalización y duración media en una vista.' },
-        { icon: '📅', title: 'Informes semanales / mensuales', description: 'Resúmenes automáticos por correo o en la app. Construye el hábito de la reflexión.' },
+        { icon: '📅', title: 'Informes semanales / mensuales', description: 'Resúmenes automáticos en la app móvil. Construye el hábito de la reflexión.' },
         { icon: '👥', title: 'Comparación con pares (opcional)', description: 'Comparación anónima con usuarios del mismo rol u objetivo. Solo participación voluntaria.' },
       ],
     },
@@ -1224,49 +1224,49 @@ export const messages: Record<Locale, Messages> = {
     },
     hero: {
       badge: 'Chrome-Erweiterung + Desktop + Android',
-      title: 'Gedankenloses Surfen\nzerstört deinen Fokus',
+      title: 'Tauche ein in Flow.\nTauche tief in deine Arbeit.',
       subtitle:
-        'Öffnest du Instagram, ohne nachzudenken?\nFlowdive blockiert diesen Moment und erinnert dich an dein Ziel.',
+        'Endlose Benachrichtigungen von Social Media, Spielen und Communities.\nEin Klick zerstört deine Chance auf tiefe Konzentration.\nFlowdive blockiert diesen Moment und erinnert dich an dein Ziel.',
       ctaPrimary: 'Kostenlos zu Chrome hinzufügen',
       ctaSecondary: 'Desktop-App herunterladen',
       ctaTertiary: 'Android-App holen',
       blockPage: {
-        headline: 'Zeit zum Fokussieren',
+        headline: 'Zeit, in den Flow zu tauchen',
         currentGoal: 'Aktuelles Ziel',
-        sampleGoal: 'Kapitel 3 der Abschlussarbeit schreiben',
+        sampleGoal: 'Bericht fertigstellen',
         timer: '42 Min. fokussiert',
       },
     },
     features: {
       label: 'Funktionen',
-      heading: 'Fokussiere durch Umgebung, nicht durch Willenskraft',
+      heading: 'Deine Willenskraft ist eine endliche Ressource\nLass sie nicht von deiner Umgebung verbrauchen',
       subheading:
-        'Flowdive blockiert gedankenlose Besuche physisch, damit du gar keine Wahl hast, als konzentriert zu bleiben.',
+        'Flowdive blockiert gedankenlose Besuche physisch — du hast keine Wahl, als konzentriert zu bleiben.',
       items: [
         {
           icon: '🚫',
           title: 'Webseiten blockieren',
           description:
-            'Füge ablenkende Seiten wie Instagram, Netflix oder Instagram zur Blockliste hinzu. Im Fokusmodus wird der Zugriff blockiert.',
+            'Füge Social Media, Foren und ablenkende Seiten zur Blockliste hinzu. Im Fokusmodus wird der Zugriff gesperrt.',
         },
         {
           icon: '🎯',
           title: 'Ziele setzen',
           description:
-            'Gib ein, was du erledigen musst. Die Blockseite zeigt dein Ziel und verwandelt einen gedankenlosen Besuch in eine bewusste Entscheidung.',
+            'Schreibe auf, worauf du dich konzentrierst. Die gesperrte Seite zeigt es — jeder unbewusste Besuch wird zur Chance, dein Ziel wiederzufinden.',
         },
         {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            'Während der eingestellten Zeit kann der Fokusmodus nicht beendet werden. Stoppt dein zukünftiges Ich, wenn die Versuchung kommt.',
+            'Der Fokusmodus kann während der eingestellten Zeit nicht gestoppt werden. Eine starke Sperre, die tieferen Flow erzeugt.',
           badge: 'Pro',
         },
         {
           icon: '💻',
           title: 'Plattformübergreifend',
           description:
-            'Steuere deinen Browser mit der Chrome-Erweiterung und blockiere Nicht-Browser-Apps mit der Windows-App – ein Konto, synchronisiert.',
+            'Starte Deep Dive auf deinem Handy. Die Desktop-App auf demselben Konto blockiert auch Browser und Programme. **Sperre dich ein. Befreie dein Potenzial.**',
           badge: 'Pro',
         },
       ],
@@ -1280,8 +1280,8 @@ export const messages: Record<Locale, Messages> = {
       lifetimeBadge: 'Launch-Angebot',
       lifetimePerks: [
         '✨ Alle zukünftigen Updates — für immer kostenlos',
-        '🔒 Geschützt vor allen Preiserhöhungen',
-        '🪪 Nur für Launch-Unterstützer — Lifetime-Plan endet nach dem offiziellen Launch',
+        '🔒 Festgesetzt — nie von Preiserhöhungen betroffen',
+        '🪪 Nur Launch-Unterstützer — limitierte Plätze, endet bei vollem Kontingent',
       ],
       yearlyBadge: '{n}% sparen',
       free: {
@@ -1338,12 +1338,12 @@ export const messages: Record<Locale, Messages> = {
     },
     roadmap: {
       label: 'Demnächst',
-      heading: 'Tiefere Daten, ehrlicheres Selbstverständnis',
+      heading: 'Tiefere Daten. Tieferes Potenzial.',
       subheading: 'Wird schrittweise veröffentlicht, sobald Daten zusammenkommen.',
       items: [
         { icon: '📊', title: 'Fokus-Muster nach Tageszeit', description: 'Sieh, wann du dich am besten konzentrierst. Entdecke deinen eigenen Rhythmus.' },
         { icon: '🎯', title: 'Zielerreichungsrate', description: 'Nach Zieltext gruppiert — Abschlussrate und durchschnittliche Dauer in einer Ansicht.' },
-        { icon: '📅', title: 'Wochen- / Monatsberichte', description: 'Automatische Zusammenfassung per E-Mail oder in der App. Baut dir die Reflexionsgewohnheit auf.' },
+        { icon: '📅', title: 'Wochen- / Monatsberichte', description: 'Automatische Zusammenfassung in der Mobile-App. Baut dir die Reflexionsgewohnheit auf.' },
         { icon: '👥', title: 'Peer-Vergleich (Opt-in)', description: 'Anonymer Vergleich mit Nutzern derselben Rolle oder desselben Ziels. Nur freiwillig.' },
       ],
     },

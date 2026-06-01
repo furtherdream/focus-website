@@ -16,6 +16,18 @@ import { openPaddleCheckout } from './lib/paddle'
 // 헬퍼 컴포넌트
 // ─────────────────────────────────────────────────────────
 
+/**
+ * i18n 문자열의 `**...**` 마크다운을 <strong> 으로 변환.
+ * dangerouslySetInnerHTML 없이 React-friendly split + map 방식이라 XSS 안전.
+ */
+function richText(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith('**') && part.endsWith('**')
+      ? <strong key={i} className="text-slate-900 font-semibold">{part.slice(2, -2)}</strong>
+      : part
+  )
+}
+
 function LanguageSwitcher() {
   const { locale, setLocale } = useTranslation()
   return (
@@ -224,7 +236,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16 md:mb-20">
             <p className="text-violet-600 font-semibold text-sm uppercase tracking-wider mb-3">{t.features.label}</p>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4 whitespace-pre-line">
               {t.features.heading}
             </h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto">{t.features.subheading}</p>
@@ -245,7 +257,7 @@ export default function Home() {
                   )}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{f.title}</h3>
-                <p className="text-slate-500 leading-relaxed">{f.description}</p>
+                <p className="text-slate-500 leading-relaxed">{richText(f.description)}</p>
               </div>
             ))}
           </div>
@@ -257,7 +269,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-14 md:mb-16">
             <p className="text-violet-600 font-semibold text-sm uppercase tracking-wider mb-3">{t.roadmap.label}</p>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">{t.roadmap.heading}</h2>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4 whitespace-pre-line">{t.roadmap.heading}</h2>
             <p className="text-slate-500 text-lg">{t.roadmap.subheading}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
