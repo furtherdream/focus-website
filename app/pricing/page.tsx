@@ -141,35 +141,41 @@ export default function PricingPage() {
                   </span>
                 </div>
 
-                {/* 플랜 토글 */}
-                <div className="inline-flex bg-white/5 border border-white/10 rounded-full p-1 mb-6 text-xs font-medium">
+                {/* 플랜 토글
+                    - 모바일: 화면 전체 폭 균등 분포, 배지는 plan 이름 아래 두 줄 배치
+                    - 데스크탑: 자동 폭, 배지는 plan 이름 오른쪽 inline */}
+                <div className="flex sm:inline-flex w-full sm:w-auto bg-white/5 border border-white/10 rounded-full p-1 mb-6 text-xs font-medium">
                   {(['monthly', 'yearly', 'lifetime'] as const).map((p) => (
                     <button
                       key={p}
                       type="button"
                       onClick={() => setProPlan(p)}
-                      className={`px-4 py-1.5 rounded-full transition-colors ${
+                      className={`flex-1 sm:flex-none flex flex-col sm:flex-row items-center sm:items-baseline justify-center sm:gap-1.5 px-3 sm:px-4 py-1.5 rounded-full transition-colors whitespace-nowrap leading-tight ${
                         proPlan === p
                           ? 'bg-white text-slate-900'
                           : 'text-violet-200 hover:text-white'
                       }`}
                     >
-                      {t.pricing.planLabel[p]}
+                      <span>{t.pricing.planLabel[p]}</span>
                       {p === 'yearly' && proPlan !== 'yearly' && (
-                        <span className="ml-1.5 text-[10px] text-emerald-300">·{t.pricing.yearlyBadge.replace('{n}', String(prices.yearlyDiscount))}</span>
+                        <span className="text-[10px] text-emerald-300 mt-0.5 sm:mt-0">
+                          <span className="hidden sm:inline">·</span>{t.pricing.yearlyBadge.replace('{n}', String(prices.yearlyDiscount))}
+                        </span>
                       )}
                       {p === 'lifetime' && proPlan !== 'lifetime' && (
-                        <span className="ml-1.5 text-[10px] text-amber-300">·{t.pricing.lifetimeBadge}</span>
+                        <span className="text-[10px] text-amber-300 mt-0.5 sm:mt-0">
+                          <span className="hidden sm:inline">·</span>{t.pricing.lifetimeBadge}
+                        </span>
                       )}
                     </button>
                   ))}
                 </div>
 
-                <div className="flex items-baseline gap-1 mb-8">
-                  <span className="text-5xl font-bold">{prices[proPlan]}</span>
+                <div className="flex flex-wrap items-baseline gap-x-1 gap-y-2 mb-8">
+                  <span className="text-4xl sm:text-5xl font-bold">{prices[proPlan]}</span>
                   <span className="text-violet-300 text-base">{t.pricing.pro[proPlan].period}</span>
                   {proPlan === 'lifetime' && (
-                    <span className="ml-2 text-xs bg-amber-400/20 border border-amber-300/30 text-amber-200 px-2 py-0.5 rounded-full">
+                    <span className="ml-1 text-xs bg-amber-400/20 border border-amber-300/30 text-amber-200 px-2 py-0.5 rounded-full whitespace-nowrap">
                       {t.pricing.lifetimeBadge}
                     </span>
                   )}

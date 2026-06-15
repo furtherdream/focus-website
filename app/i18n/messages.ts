@@ -28,6 +28,7 @@ type Messages = {
     ctaPrimary: string
     ctaSecondary: string
     ctaTertiary: string
+    ctaIos: string
     blockPage: { headline: string; currentGoal: string; sampleGoal: string; timer: string }
   }
   stats: {
@@ -116,16 +117,17 @@ export const messages: Record<Locale, Messages> = {
       ctaPrimary: 'Chrome에 무료로 추가하기',
       ctaSecondary: '데스크탑 앱 다운로드',
       ctaTertiary: 'Android 앱 받기',
+      ctaIos: 'iOS — 곧 출시',
       blockPage: {
         headline: '지금은 몰입하는 시간이에요',
         currentGoal: '현재 목표',
         sampleGoal: '보고서 만들기',
-        timer: '42분째 집중 중',
+        timer: '42분째 몰입 중',
       },
     },
     features: {
       label: '기능 소개',
-      heading: '의지력의 총량은 정해져 있습니다.\n주변 환경에 의지력을 빼앗기지 마세요.',
+      heading: '의지력의 총량은 정해져 있습니다\n주변 환경에 의지력을 빼앗기지 마세요',
       subheading:
         'Flowdive는 무의식적인 방문을 물리적으로 차단해 몰입할 수밖에 없는 환경을 만들어드립니다.',
       items: [
@@ -133,19 +135,19 @@ export const messages: Record<Locale, Messages> = {
           icon: '🚫',
           title: '사이트 차단',
           description:
-            'SNS, 각종 커뮤니티 등 집중을 방해하는 사이트를 차단 리스트에 추가하세요. 집중 모드 중에는 접근이 차단됩니다.',
+            'SNS, 각종 커뮤니티 등 몰입을 방해하는 사이트를 차단 리스트에 추가하세요. 몰입 모드 중에는 접근이 차단됩니다.',
         },
         {
           icon: '🎯',
           title: '목표 설정',
           description:
-            '집중할 목표를 입력하면 차단 페이지에서 목표를 상기시켜드립니다. 무의식적인 방문을 목표 재확인의 기회로 바꿔드립니다.',
+            '몰입할 목표를 입력하면 차단 페이지에서 목표를 상기시켜드립니다. 무의식적인 방문을 목표 재확인의 기회로 바꿔드립니다.',
         },
         {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            '입력한 시간 동안은 집중 모드를 종료할 수 없습니다. 더 깊은 몰입의 상황을 만들어주는 강력한 잠금 기능입니다.',
+            '입력한 시간 동안은 몰입 모드를 종료할 수 없습니다. 더 깊은 몰입의 상황을 만들어주는 강력한 잠금 기능입니다.',
           badge: 'Pro',
         },
         {
@@ -161,7 +163,7 @@ export const messages: Record<Locale, Messages> = {
       label: '가격 정책',
       heading: '시작은 무료로',
       subheading:
-        '기본 차단 기능은 무료입니다. 더 강력한 집중이 필요할 때 업그레이드하세요.',
+        '기본 차단 기능은 무료입니다. 더 강력한 몰입이 필요할 때 업그레이드하세요.',
       planLabel: { monthly: '월간', yearly: '연간', lifetime: '평생' },
       lifetimeBadge: '초기 이벤트',
       lifetimePerks: [
@@ -200,7 +202,7 @@ export const messages: Record<Locale, Messages> = {
     },
     download: {
       heading: '지금 시작해보세요',
-      subheading: '설치 1분, 오늘부터 집중력이 달라집니다.',
+      subheading: '설치 1분, 오늘부터 몰입력이 달라집니다.',
       chrome: {
         title: 'Chrome 확장',
         description: '브라우저 내 사이트 차단 · 무료',
@@ -227,7 +229,7 @@ export const messages: Record<Locale, Messages> = {
       heading: '더 깊은 데이터,\n더 무한한 나의 가능성 맞이하기',
       subheading: '데이터가 쌓이는 대로 순차 공개합니다.',
       items: [
-        { icon: '📊', title: '시간대별 집중 패턴', description: '하루 중 가장 잘 몰입하는 시간대를 가시화. 본인만의 리듬을 발견하세요.' },
+        { icon: '📊', title: '시간대별 몰입 패턴', description: '하루 중 가장 잘 몰입하는 시간대를 가시화. 본인만의 리듬을 발견하세요.' },
         { icon: '🎯', title: '목표별 성취율', description: '입력한 목표 텍스트 기준으로 완주율·평균 지속 시간을 묶어 보여줍니다.' },
         { icon: '📅', title: '주간 / 월간 리포트', description: '모바일 앱으로 자동 요약 전달. 회고 습관을 자동으로 만들어드립니다.' },
         { icon: '👥', title: '동기 비교 (옵션)', description: '같은 직군·같은 목표 사용자들과 익명 비교. 자발적 참여만.' },
@@ -235,15 +237,15 @@ export const messages: Record<Locale, Messages> = {
     },
     stats: {
       items: [
-        { number: '12,000+', label: '집중을 시작한 사용자' },
+        { number: '12,000+', label: '몰입을 시작한 사용자' },
         { number: '4.2M', label: '차단된 방해 사이트 접근' },
-        { number: '38,000+', label: '누적 집중 시간' },
+        { number: '38,000+', label: '누적 몰입 시간' },
         { number: '4.8 ★', label: '평균 사용자 평점' },
       ],
     },
     howItWorks: {
       label: '작동 방식',
-      heading: '3단계로 집중 환경을 만들어요',
+      heading: '3단계로 몰입 환경을 만들어요',
       subheading: '복잡한 설정 없이, 지금 바로 시작할 수 있습니다.',
       steps: [
         {
@@ -258,14 +260,14 @@ export const messages: Record<Locale, Messages> = {
         },
         {
           number: '03',
-          title: '집중 모드 시작',
+          title: '몰입 모드 시작',
           description: '버튼 한 번이면 끝. 무의식적으로 사이트를 열어도 차단 페이지가 막아줍니다.',
         },
       ],
     },
     testimonials: {
       label: '사용자 후기',
-      heading: '집중력을 되찾은 사람들',
+      heading: '몰입력을 되찾은 사람들',
       items: [
         {
           quote: '예전엔 일하다 무심코 유튜브를 켰는데, 이제는 그 버릇이 사라졌어요. 차단 페이지에 적힌 내 목표를 보면 정신이 번쩍 들어요.',
@@ -273,7 +275,7 @@ export const messages: Record<Locale, Messages> = {
           role: '대학원생',
         },
         {
-          quote: 'Deep Dive 덕분에 회의 자료 만들 때 3시간 완벽하게 집중했습니다. 평소 같으면 SNS만 들락거렸을 시간이었어요.',
+          quote: 'Deep Dive 덕분에 회의 자료 만들 때 3시간 완벽하게 몰입했습니다. 평소 같으면 SNS만 들락거렸을 시간이었어요.',
           author: '이서연',
           role: '디자이너',
         },
@@ -289,7 +291,7 @@ export const messages: Record<Locale, Messages> = {
       heading: '궁금한 점이 있으신가요?',
       items: [
         {
-          question: '집중 모드 중에 차단을 해제할 수 있나요?',
+          question: '몰입 모드 중에 차단을 해제할 수 있나요?',
           answer: '일반 모드에서는 언제든 종료할 수 있어요. Deep Dive는 설정한 시간이 끝날 때까지 끌 수 없습니다.',
         },
         {
@@ -311,8 +313,8 @@ export const messages: Record<Locale, Messages> = {
       ],
     },
     finalCta: {
-      heading: '오늘부터 집중하세요',
-      subheading: '내 의지가 약해서가 아닙니다. 환경이 그렇게 만드는 거예요. 몰입의 환경으로 Dive!',
+      heading: '오늘부터 몰입하세요',
+      subheading: '내 의지가 약해서가 아닙니다.\n환경이 그렇게 만드는 거예요.\n몰입으로 Dive!',
       ctaPrimary: 'Chrome에 무료로 추가',
       ctaSecondary: '데스크탑 앱 다운로드',
       ctaTertiary: 'Android 앱 받기',
@@ -339,6 +341,7 @@ export const messages: Record<Locale, Messages> = {
       ctaPrimary: 'Add to Chrome — Free',
       ctaSecondary: 'Download desktop app',
       ctaTertiary: 'Get Android app',
+      ctaIos: 'iOS — Coming soon',
       blockPage: {
         headline: 'Time to dive into FLOW',
         currentGoal: 'Current Goal',
@@ -356,7 +359,7 @@ export const messages: Record<Locale, Messages> = {
           icon: '🚫',
           title: 'Site Blocking',
           description:
-            'Add social media, forums, and any distracting sites to your block list. Access is cut off during focus mode.',
+            'Add social media, forums, and any distracting sites to your block list. Access is cut off during Flow Dive.',
         },
         {
           icon: '🎯',
@@ -368,7 +371,7 @@ export const messages: Record<Locale, Messages> = {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            'Focus mode can\'t be stopped during the set time. A strong lock that engineers deeper flow.',
+            'Flow Dive can\'t be stopped during the set time. A strong lock that engineers deeper flow.',
           badge: 'Pro',
         },
         {
@@ -481,7 +484,7 @@ export const messages: Record<Locale, Messages> = {
         },
         {
           number: '03',
-          title: 'Start focus mode',
+          title: 'Start Flow Dive',
           description: 'One click. When you open a blocked site by reflex, Flowdive redirects you to your goal.',
         },
       ],
@@ -512,7 +515,7 @@ export const messages: Record<Locale, Messages> = {
       heading: 'Got questions?',
       items: [
         {
-          question: 'Can I stop blocking while focus mode is on?',
+          question: 'Can I stop blocking while Flow Dive is on?',
           answer: 'Yes, in standard mode you can stop anytime. Deep Dive locks blocking until your timer ends.',
         },
         {
@@ -562,11 +565,12 @@ export const messages: Record<Locale, Messages> = {
       ctaPrimary: 'Chromeに無料で追加',
       ctaSecondary: 'デスクトップアプリをダウンロード',
       ctaTertiary: 'Androidアプリを入手',
+      ctaIos: 'iOS — 近日リリース',
       blockPage: {
         headline: '今は没入する時間です',
         currentGoal: '現在の目標',
         sampleGoal: 'レポート作成',
-        timer: '42分間集中中',
+        timer: '42分間没入中',
       },
     },
     features: {
@@ -579,19 +583,19 @@ export const messages: Record<Locale, Messages> = {
           icon: '🚫',
           title: 'サイトブロック',
           description:
-            'SNS、各種コミュニティなど集中を妨げるサイトをブロックリストに追加。集中モード中はアクセスが遮断されます。',
+            'SNS、各種コミュニティなど没入を妨げるサイトをブロックリストに追加。没入モード中はアクセスが遮断されます。',
         },
         {
           icon: '🎯',
           title: '目標設定',
           description:
-            '集中する目標を入力すると、ブロックページで目標を思い出させます。無意識な訪問を、目標再確認の機会に変えてくれます。',
+            '没入する目標を入力すると、ブロックページで目標を思い出させます。無意識な訪問を、目標再確認の機会に変えてくれます。',
         },
         {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            '入力した時間中は集中モードを終了できません。より深い没入の状況を作り出す強力なロック機能です。',
+            '入力した時間中は没入モードを終了できません。より深い没入の状況を作り出す強力なロック機能です。',
           badge: 'Pro',
         },
         {
@@ -607,7 +611,7 @@ export const messages: Record<Locale, Messages> = {
       label: '料金プラン',
       heading: '無料で始めよう',
       subheading:
-        '基本のブロック機能は無料です。より強力な集中が必要な時にアップグレードしてください。',
+        '基本のブロック機能は無料です。より強力な没入が必要な時にアップグレードしてください。',
       planLabel: { monthly: '月額', yearly: '年額', lifetime: '永年' },
       lifetimeBadge: 'ローンチ特典',
       lifetimePerks: [
@@ -646,7 +650,7 @@ export const messages: Record<Locale, Messages> = {
     },
     download: {
       heading: '今すぐ始めよう',
-      subheading: '1分でインストール。今日から集中力が変わります。',
+      subheading: '1分でインストール。今日から没入力が変わります。',
       chrome: {
         title: 'Chrome拡張機能',
         description: 'ブラウザ内でサイトをブロック · 無料',
@@ -673,7 +677,7 @@ export const messages: Record<Locale, Messages> = {
       heading: 'より深いデータ、より無限大の私の可能性へ',
       subheading: 'データが蓄積され次第、順次公開します。',
       items: [
-        { icon: '📊', title: '時間帯別の集中パターン', description: '一日の中で最も集中できる時間帯を可視化。あなた自身のリズムを発見できます。' },
+        { icon: '📊', title: '時間帯別の没入パターン', description: '一日の中で最も没入できる時間帯を可視化。あなた自身のリズムを発見できます。' },
         { icon: '🎯', title: '目標別達成率', description: '入力した目標テキストごとに完走率・平均継続時間をまとめて表示します。' },
         { icon: '📅', title: '週次 / 月次レポート', description: 'モバイルアプリで自動要約をお届け。振り返りの習慣を自動で作ります。' },
         { icon: '👥', title: '同業者比較 (任意)', description: '同じ職種・同じ目標のユーザーと匿名で比較。希望者のみ参加。' },
@@ -681,15 +685,15 @@ export const messages: Record<Locale, Messages> = {
     },
     stats: {
       items: [
-        { number: '12,000+', label: '集中を始めたユーザー' },
+        { number: '12,000+', label: '没入を始めたユーザー' },
         { number: '4.2M', label: 'ブロックされた妨害アクセス' },
-        { number: '38,000+', label: '累積集中時間' },
+        { number: '38,000+', label: '累積没入時間' },
         { number: '4.8 ★', label: '平均ユーザー評価' },
       ],
     },
     howItWorks: {
       label: '使い方',
-      heading: '3ステップで集中環境をつくる',
+      heading: '3ステップで没入環境をつくる',
       subheading: '複雑な設定なし、今すぐ始められます。',
       steps: [
         {
@@ -704,14 +708,14 @@ export const messages: Record<Locale, Messages> = {
         },
         {
           number: '03',
-          title: '集中モードを開始',
+          title: '没入モードを開始',
           description: 'ボタン1つで完了。無意識に開いてもブロックページが守ってくれます。',
         },
       ],
     },
     testimonials: {
       label: 'ユーザーの声',
-      heading: '集中を取り戻した人たち',
+      heading: '没入を取り戻した人たち',
       items: [
         {
           quote: '以前は何気なくInstagramを開いていましたが、今はその習慣が消えました。ブロックページの目標を見ると気が引き締まります。',
@@ -719,7 +723,7 @@ export const messages: Record<Locale, Messages> = {
           role: '大学院生',
         },
         {
-          quote: 'Deep Diveのおかげで資料作成に3時間完璧に集中できました。普段ならSNSばかり見ていた時間です。',
+          quote: 'Deep Diveのおかげで資料作成に3時間完璧に没入できました。普段ならSNSばかり見ていた時間です。',
           author: '佐藤 美咲',
           role: 'デザイナー',
         },
@@ -735,7 +739,7 @@ export const messages: Record<Locale, Messages> = {
       heading: 'ご質問はありますか？',
       items: [
         {
-          question: '集中モード中にブロックを解除できますか？',
+          question: '没入モード中にブロックを解除できますか？',
           answer: '通常モードならいつでも終了できます。Deep Diveは設定した時間が終わるまで解除できません。',
         },
         {
@@ -757,7 +761,7 @@ export const messages: Record<Locale, Messages> = {
       ],
     },
     finalCta: {
-      heading: '今日から集中しよう',
+      heading: '今日から没入しよう',
       subheading: '意志が弱いのではありません。環境がそうさせるのです。Flowdiveがその環境を変えます。',
       ctaPrimary: 'Chromeに無料で追加',
       ctaSecondary: 'デスクトップアプリをダウンロード',
@@ -781,40 +785,41 @@ export const messages: Record<Locale, Messages> = {
       badge: 'Chrome 扩展 + 桌面 + Android',
       title: '潜入心流\n深潜你的工作',
       subtitle:
-        '社交、游戏、社区的无尽通知。\n单击一下,深度专注就被打破。\nFlowdive 阻止那一刻,提醒你的目标。',
+        '社交、游戏、社区的无尽通知。\n单击一下,深度沉浸就被打破。\nFlowdive 阻止那一刻,提醒你的目标。',
       ctaPrimary: '免费添加到Chrome',
       ctaSecondary: '下载桌面应用',
       ctaTertiary: '获取 Android 应用',
+      ctaIos: 'iOS — 即将推出',
       blockPage: {
         headline: '现在是潜入心流的时间',
         currentGoal: '当前目标',
         sampleGoal: '完成报告',
-        timer: '已专注42分钟',
+        timer: '已沉浸42分钟',
       },
     },
     features: {
       label: '功能介绍',
       heading: '意志力是有限的资源\n别让环境耗尽它',
       subheading:
-        'Flowdive 物理屏蔽无意识访问,让你别无选择,只能保持专注。',
+        'Flowdive 物理屏蔽无意识访问,让你别无选择,只能保持沉浸。',
       items: [
         {
           icon: '🚫',
           title: '网站屏蔽',
           description:
-            '将社交媒体、论坛和任何分心网站添加到屏蔽列表。专注模式期间访问被切断。',
+            '将社交媒体、论坛和任何分心网站添加到屏蔽列表。沉浸模式期间访问被切断。',
         },
         {
           icon: '🎯',
           title: '目标设定',
           description:
-            '写下你正在专注的事情。屏蔽页面会显示它 — 每次无意识访问都成为重新锚定目标的机会。',
+            '写下你正在沉浸的事情。屏蔽页面会显示它 — 每次无意识访问都成为重新锚定目标的机会。',
         },
         {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            '设定时间内无法停止专注模式。一种强大的锁定,设计更深层的心流。',
+            '设定时间内无法停止沉浸模式。一种强大的锁定,设计更深层的心流。',
           badge: 'Pro',
         },
         {
@@ -829,7 +834,7 @@ export const messages: Record<Locale, Messages> = {
     pricing: {
       label: '价格政策',
       heading: '免费开始',
-      subheading: '核心屏蔽功能免费。需要更强专注时升级。',
+      subheading: '核心屏蔽功能免费。需要更强沉浸时升级。',
       planLabel: { monthly: '月付', yearly: '年付', lifetime: '永久' },
       lifetimeBadge: '上线特惠',
       lifetimePerks: [
@@ -868,7 +873,7 @@ export const messages: Record<Locale, Messages> = {
     },
     download: {
       heading: '立即开始',
-      subheading: '1分钟安装。从今天开始改变你的专注力。',
+      subheading: '1分钟安装。从今天开始改变你的沉浸力。',
       chrome: {
         title: 'Chrome扩展',
         description: '在浏览器内屏蔽网站 · 免费',
@@ -895,7 +900,7 @@ export const messages: Record<Locale, Messages> = {
       heading: '更深的数据。更深的潜能。',
       subheading: '随着数据积累将陆续公开。',
       items: [
-        { icon: '📊', title: '时段专注模式', description: '可视化一天中最专注的时段。发现属于你自己的节奏。' },
+        { icon: '📊', title: '时段沉浸模式', description: '可视化一天中最沉浸的时段。发现属于你自己的节奏。' },
         { icon: '🎯', title: '目标达成率', description: '按输入的目标文本汇总完成率和平均时长。' },
         { icon: '📅', title: '周报 / 月报', description: '通过移动应用自动发送摘要。自动养成复盘习惯。' },
         { icon: '👥', title: '同行对比 (可选)', description: '与相同职业、相同目标的用户匿名对比。仅自愿参与。' },
@@ -903,15 +908,15 @@ export const messages: Record<Locale, Messages> = {
     },
     stats: {
       items: [
-        { number: '12,000+', label: '开始专注的用户' },
+        { number: '12,000+', label: '开始沉浸的用户' },
         { number: '4.2M', label: '已屏蔽的干扰访问' },
-        { number: '38,000+', label: '累计专注时间' },
+        { number: '38,000+', label: '累计沉浸时间' },
         { number: '4.8 ★', label: '平均用户评分' },
       ],
     },
     howItWorks: {
       label: '工作原理',
-      heading: '三步打造专注环境',
+      heading: '三步打造沉浸环境',
       subheading: '无需复杂设置，立即开始。',
       steps: [
         {
@@ -926,14 +931,14 @@ export const messages: Record<Locale, Messages> = {
         },
         {
           number: '03',
-          title: '开启专注模式',
+          title: '开启沉浸模式',
           description: '一键搞定。即使无意识打开网站，屏蔽页面也会拦住你。',
         },
       ],
     },
     testimonials: {
       label: '用户反馈',
-      heading: '重获专注的人们',
+      heading: '重获沉浸的人们',
       items: [
         {
           quote: '以前工作时总是无意识地打开Instagram，现在这个习惯消失了。看到屏蔽页面上的目标，立刻清醒。',
@@ -941,7 +946,7 @@ export const messages: Record<Locale, Messages> = {
           role: '研究生',
         },
         {
-          quote: 'Deep Dive让我做PPT时连续专注了3小时。平时这些时间都浪费在刷社交媒体上了。',
+          quote: 'Deep Dive让我做PPT时连续沉浸了3小时。平时这些时间都浪费在刷社交媒体上了。',
           author: '李静',
           role: '设计师',
         },
@@ -957,7 +962,7 @@ export const messages: Record<Locale, Messages> = {
       heading: '有疑问吗？',
       items: [
         {
-          question: '专注模式中可以解除屏蔽吗？',
+          question: '沉浸模式中可以解除屏蔽吗？',
           answer: '普通模式下随时可以停止。Deep Dive必须等设定的时间结束后才能关闭。',
         },
         {
@@ -979,7 +984,7 @@ export const messages: Record<Locale, Messages> = {
       ],
     },
     finalCta: {
-      heading: '从今天开始专注',
+      heading: '从今天开始沉浸',
       subheading: '不是意志薄弱，是环境让你分心。Flowdive帮你重塑环境。',
       ctaPrimary: '免费添加到Chrome',
       ctaSecondary: '下载桌面应用',
@@ -1007,6 +1012,7 @@ export const messages: Record<Locale, Messages> = {
       ctaPrimary: 'Añadir a Chrome — Gratis',
       ctaSecondary: 'Descargar app de escritorio',
       ctaTertiary: 'Obtener app de Android',
+      ctaIos: 'iOS — Próximamente',
       blockPage: {
         headline: 'Es hora de entrar en el flow',
         currentGoal: 'Objetivo actual',
@@ -1024,7 +1030,7 @@ export const messages: Record<Locale, Messages> = {
           icon: '🚫',
           title: 'Bloqueo de sitios',
           description:
-            'Agrega redes sociales, foros y cualquier sitio distractor a tu lista de bloqueo. El acceso queda cortado durante el modo de concentración.',
+            'Agrega redes sociales, foros y cualquier sitio distractor a tu lista de bloqueo. El acceso queda cortado durante Flow Dive.',
         },
         {
           icon: '🎯',
@@ -1036,7 +1042,7 @@ export const messages: Record<Locale, Messages> = {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            'El modo de concentración no se puede detener durante el tiempo establecido. Un bloqueo fuerte que diseña un flow más profundo.',
+            'Flow Dive no se puede detener durante el tiempo establecido. Un bloqueo fuerte que diseña un flow más profundo.',
           badge: 'Pro',
         },
         {
@@ -1149,7 +1155,7 @@ export const messages: Record<Locale, Messages> = {
         },
         {
           number: '03',
-          title: 'Inicia el modo concentración',
+          title: 'Inicia Flow Dive',
           description: 'Un clic basta. Si abres una web bloqueada por reflejo, te redirigimos a tu objetivo.',
         },
       ],
@@ -1180,7 +1186,7 @@ export const messages: Record<Locale, Messages> = {
       heading: '¿Tienes preguntas?',
       items: [
         {
-          question: '¿Puedo detener el bloqueo durante el modo concentración?',
+          question: '¿Puedo detener el bloqueo durante Flow Dive?',
           answer: 'En modo estándar puedes detenerlo cuando quieras. El Deep Dive bloquea hasta que termine el temporizador.',
         },
         {
@@ -1230,6 +1236,7 @@ export const messages: Record<Locale, Messages> = {
       ctaPrimary: 'Kostenlos zu Chrome hinzufügen',
       ctaSecondary: 'Desktop-App herunterladen',
       ctaTertiary: 'Android-App holen',
+      ctaIos: 'iOS — Demnächst',
       blockPage: {
         headline: 'Zeit, in den Flow zu tauchen',
         currentGoal: 'Aktuelles Ziel',
@@ -1247,7 +1254,7 @@ export const messages: Record<Locale, Messages> = {
           icon: '🚫',
           title: 'Webseiten blockieren',
           description:
-            'Füge Social Media, Foren und ablenkende Seiten zur Blockliste hinzu. Im Fokusmodus wird der Zugriff gesperrt.',
+            'Füge Social Media, Foren und ablenkende Seiten zur Blockliste hinzu. Im Flow Dive wird der Zugriff gesperrt.',
         },
         {
           icon: '🎯',
@@ -1259,7 +1266,7 @@ export const messages: Record<Locale, Messages> = {
           icon: '🔒',
           title: 'Deep Dive',
           description:
-            'Der Fokusmodus kann während der eingestellten Zeit nicht gestoppt werden. Eine starke Sperre, die tieferen Flow erzeugt.',
+            'Der Flow Dive kann während der eingestellten Zeit nicht gestoppt werden. Eine starke Sperre, die tieferen Flow erzeugt.',
           badge: 'Pro',
         },
         {
@@ -1372,7 +1379,7 @@ export const messages: Record<Locale, Messages> = {
         },
         {
           number: '03',
-          title: 'Fokusmodus starten',
+          title: 'Flow Dive starten',
           description: 'Ein Klick. Öffnest du reflexartig eine Seite, leitet dich Flowdive zu deinem Ziel zurück.',
         },
       ],
@@ -1403,7 +1410,7 @@ export const messages: Record<Locale, Messages> = {
       heading: 'Hast du Fragen?',
       items: [
         {
-          question: 'Kann ich das Blockieren während des Fokusmodus stoppen?',
+          question: 'Kann ich das Blockieren während des Flow Dive stoppen?',
           answer: 'Im Standardmodus jederzeit. Deep Dive sperrt bis der Timer abgelaufen ist.',
         },
         {
