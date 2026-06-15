@@ -68,47 +68,6 @@ export const PLATFORM_LABELS: Record<Locale, Record<Platform, string>> = {
 }
 
 export const CHANGELOG: ChangelogEntry[] = [
-  // ⚠️ TEMP: 빨간 점 뱃지 동작 점검용 임시 항목. 정식 출시 직전 이 블록 통째로 삭제할 것.
-  {
-    version: 'v1.0.1',
-    date: '2026-06-16',
-    platforms: ['all'],
-    highlight: false,
-    title: {
-      ko: '업데이트 알림 동작 점검 (테스트)',
-      en: 'Update notification check (test)',
-      ja: 'アップデート通知の動作確認 (テスト)',
-      'zh-CN': '更新通知动作检查 (测试)',
-      es: 'Verificación de notificación de actualización (prueba)',
-      de: 'Test der Update-Benachrichtigung',
-    },
-    items: {
-      ko: [
-        '빨간 점 뱃지가 모든 플랫폼 (Chrome / Desktop / Android / iOS) 에서 정상 동작하는지 확인합니다.',
-        '정식 출시 시 이 항목은 제거됩니다.',
-      ],
-      en: [
-        'Verifying the red-dot badge works on all platforms (Chrome / Desktop / Android / iOS).',
-        'This entry will be removed before the public release.',
-      ],
-      ja: [
-        '赤い点バッジが全プラットフォーム (Chrome / Desktop / Android / iOS) で動作することを確認します。',
-        '正式リリース時に削除されます。',
-      ],
-      'zh-CN': [
-        '验证红点徽章在所有平台 (Chrome / Desktop / Android / iOS) 上正常工作。',
-        '正式发布前会移除此条目。',
-      ],
-      es: [
-        'Verificamos que el indicador rojo funciona en todas las plataformas (Chrome / Desktop / Android / iOS).',
-        'Esta entrada se eliminará antes del lanzamiento público.',
-      ],
-      de: [
-        'Wir prüfen, ob das rote Punkt-Badge auf allen Plattformen (Chrome / Desktop / Android / iOS) funktioniert.',
-        'Vor der Veröffentlichung wird dieser Eintrag entfernt.',
-      ],
-    },
-  },
   {
     version: 'v1.0.0',
     date: '2026-06-15',
