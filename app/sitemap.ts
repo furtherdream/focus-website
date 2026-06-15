@@ -51,6 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: `${SITE_URL}/changelog`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
     ...blogPosts,
     // /stats 는 로그인 페이지라 sitemap 에서 제외
     // /checkout 은 결제 진입 URL — 인덱싱 의미 없음

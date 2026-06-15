@@ -557,6 +557,7 @@ export default function Home() {
           <div className="flex gap-6 flex-wrap justify-center">
             <a href="/pricing" className="hover:text-white transition-colors">Pricing</a>
             <a href="/blog" className="hover:text-white transition-colors">Blog</a>
+            <a href="/changelog" className="hover:text-white transition-colors">{t.footer.changelog}</a>
             <a href="/terms" className="hover:text-white transition-colors">{t.footer.terms}</a>
             <a href="/privacy" className="hover:text-white transition-colors">{t.footer.privacy}</a>
             <a href="/refund" className="hover:text-white transition-colors">Refund</a>

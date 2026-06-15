@@ -225,6 +225,7 @@ export default function PricingPage() {
               <a href="/terms" className="hover:text-slate-600">Terms</a>
               <a href="/privacy" className="hover:text-slate-600">Privacy</a>
               <a href="/refund" className="hover:text-slate-600">Refund</a>
+              <a href="/changelog" className="hover:text-slate-600">Changelog</a>
             </div>
             <p>© 2026 Flowdive</p>
           </div>

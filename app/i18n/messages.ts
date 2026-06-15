@@ -96,7 +96,14 @@ type Messages = {
     ctaSecondary: string
     ctaTertiary: string
   }
-  footer: { copyright: string; privacy: string; terms: string }
+  footer: { copyright: string; privacy: string; terms: string; changelog: string }
+  changelog: {
+    label: string
+    heading: string
+    subheading: string
+    backHome: string
+    roadmapHint: string
+  }
 }
 
 // ── 번역 데이터 ──────────────────────────────────────────────
@@ -323,6 +330,14 @@ export const messages: Record<Locale, Messages> = {
       copyright: '© 2025 Flowdive. All rights reserved.',
       privacy: '개인정보처리방침',
       terms: '이용약관',
+      changelog: '업데이트 내역',
+    },
+    changelog: {
+      label: '업데이트',
+      heading: '업데이트 내역',
+      subheading: 'Flowdive 의 새로운 변경 사항을 한곳에서 확인하세요.',
+      backHome: '← 홈으로',
+      roadmapHint: '예정된 기능은 ',
     },
   },
 
@@ -547,6 +562,14 @@ export const messages: Record<Locale, Messages> = {
       copyright: '© 2025 Flowdive. All rights reserved.',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
+      changelog: 'Changelog',
+    },
+    changelog: {
+      label: 'Updates',
+      heading: 'Changelog',
+      subheading: 'Everything new in Flowdive, in one place.',
+      backHome: '← Back to home',
+      roadmapHint: 'Upcoming features are on the ',
     },
   },
 
@@ -771,6 +794,14 @@ export const messages: Record<Locale, Messages> = {
       copyright: '© 2025 Flowdive. All rights reserved.',
       privacy: 'プライバシーポリシー',
       terms: '利用規約',
+      changelog: '更新履歴',
+    },
+    changelog: {
+      label: 'アップデート',
+      heading: '更新履歴',
+      subheading: 'Flowdive の新しい変更点をひとつの場所で。',
+      backHome: '← ホームへ',
+      roadmapHint: '今後の機能は ',
     },
   },
 
@@ -994,6 +1025,14 @@ export const messages: Record<Locale, Messages> = {
       copyright: '© 2025 Flowdive. 保留所有权利。',
       privacy: '隐私政策',
       terms: '服务条款',
+      changelog: '更新日志',
+    },
+    changelog: {
+      label: '更新',
+      heading: '更新日志',
+      subheading: 'Flowdive 的所有新变化，集中一处。',
+      backHome: '← 返回首页',
+      roadmapHint: '即将上线的功能可在 ',
     },
   },
 
@@ -1218,6 +1257,14 @@ export const messages: Record<Locale, Messages> = {
       copyright: '© 2025 Flowdive. Todos los derechos reservados.',
       privacy: 'Política de privacidad',
       terms: 'Términos de servicio',
+      changelog: 'Novedades',
+    },
+    changelog: {
+      label: 'Actualizaciones',
+      heading: 'Novedades',
+      subheading: 'Todo lo nuevo de Flowdive, en un solo lugar.',
+      backHome: '← Volver al inicio',
+      roadmapHint: 'Las funciones próximas están en el ',
     },
   },
 
@@ -1442,6 +1489,14 @@ export const messages: Record<Locale, Messages> = {
       copyright: '© 2025 Flowdive. Alle Rechte vorbehalten.',
       privacy: 'Datenschutzerklärung',
       terms: 'Nutzungsbedingungen',
+      changelog: 'Änderungsprotokoll',
+    },
+    changelog: {
+      label: 'Updates',
+      heading: 'Änderungsprotokoll',
+      subheading: 'Alle Neuerungen von Flowdive auf einen Blick.',
+      backHome: '← Zur Startseite',
+      roadmapHint: 'Geplante Funktionen findest du in der ',
     },
   },
 }
