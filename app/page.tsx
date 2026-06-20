@@ -77,6 +77,12 @@ function detectDesktopUrl(): string {
   return WINDOWS_DOWNLOAD_URL
 }
 
+// 클라이언트에서 Mac 여부 판단 — exeWarning 표시 분기용
+function detectIsMac(): boolean {
+  if (typeof navigator === 'undefined') return false
+  return navigator.userAgent.toLowerCase().includes('mac')
+}
+
 // ─────────────────────────────────────────────────────────
 // 메인 페이지
 // ─────────────────────────────────────────────────────────
@@ -96,7 +102,13 @@ export default function Home() {
   // 데스크탑 다운로드 URL — Mac 이면 .dmg, 그 외(Windows/Linux/모바일) 면 .exe.
   // SSR 안정성 위해 초기엔 Windows, 마운트 후 navigator 검사로 갱신.
   const [desktopDownloadUrl, setDesktopDownloadUrl] = useState(WINDOWS_DOWNLOAD_URL)
-  useEffect(() => { setDesktopDownloadUrl(detectDesktopUrl()) }, [])
+  // exeWarning 표시 분기 (Windows 사용자에게만) — 초기 false (Mac 환경 가정 X)
+  // SSR 시 false 로 시작, 클라이언트에서 실제 OS 따라 갱신
+  const [isMacUser, setIsMacUser] = useState(false)
+  useEffect(() => {
+    setDesktopDownloadUrl(detectDesktopUrl())
+    setIsMacUser(detectIsMac())
+  }, [])
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
@@ -480,6 +492,12 @@ export default function Home() {
                 {t.download.windows.cta}
                 <ArrowRight />
               </div>
+              {/* Windows 사용자에게만 SmartScreen 경고 안내 (Mac 사용자는 서명된 .dmg 라 미표시) */}
+              {!isMacUser && (
+                <p className="mt-4 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 leading-relaxed">
+                  ⚠️ {t.download.windows.exeWarning}
+                </p>
+              )}
             </a>
             <a
               href={ANDROID_DOWNLOAD_URL}

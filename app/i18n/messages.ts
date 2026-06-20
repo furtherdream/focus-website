@@ -79,7 +79,7 @@ type Messages = {
     heading: string
     subheading: string
     chrome: { title: string; description: string; cta: string }
-    windows: { title: string; description: string; cta: string }
+    windows: { title: string; description: string; cta: string; exeWarning: string }
     android: { title: string; description: string; cta: string }
     ios: { title: string; description: string; cta: string }
   }
@@ -219,6 +219,7 @@ export const messages: Record<Locale, Messages> = {
         title: 'Windows / macOS 앱',
         description: '앱 레벨 차단 포함 · Pro',
         cta: '데스크탑 앱 다운로드',
+        exeWarning: 'Windows 가 \'알 수 없는 게시자\' 경고를 띄울 수 있어요. \'추가 정보\' → \'실행\' 클릭하면 설치됩니다.',
       },
       android: {
         title: 'Android 앱',
@@ -451,6 +452,7 @@ export const messages: Record<Locale, Messages> = {
         title: 'Windows / macOS App',
         description: 'App-level blocking included · Pro',
         cta: 'Download desktop app',
+        exeWarning: 'Windows may show an \'Unknown publisher\' warning. Click \'More info\' → \'Run anyway\' to install.',
       },
       android: {
         title: 'Android App',
@@ -683,6 +685,7 @@ export const messages: Record<Locale, Messages> = {
         title: 'Windows / macOS アプリ',
         description: 'アプリレベルのブロック搭載 · Pro',
         cta: 'デスクトップアプリをダウンロード',
+        exeWarning: 'Windows が「不明な発行元」の警告を表示することがあります。「詳細情報」→「実行」をクリックするとインストールできます。',
       },
       android: {
         title: 'Android アプリ',
@@ -914,6 +917,7 @@ export const messages: Record<Locale, Messages> = {
         title: 'Windows / macOS 应用',
         description: '包含应用级屏蔽 · Pro',
         cta: '下载桌面应用',
+        exeWarning: 'Windows 可能会显示「未知发布者」警告。点击「更多信息」→「仍要运行」即可安装。',
       },
       android: {
         title: 'Android 应用',
@@ -1146,6 +1150,7 @@ export const messages: Record<Locale, Messages> = {
         title: 'App de Windows / macOS',
         description: 'Incluye bloqueo a nivel de app · Pro',
         cta: 'Descargar app de escritorio',
+        exeWarning: 'Windows puede mostrar un aviso de \'Editor desconocido\'. Haz clic en \'Más información\' → \'Ejecutar de todas formas\' para instalar.',
       },
       android: {
         title: 'App de Android',
@@ -1378,6 +1383,7 @@ export const messages: Record<Locale, Messages> = {
         title: 'Windows / macOS App',
         description: 'App-Ebene-Blockierung enthalten · Pro',
         cta: 'Desktop-App herunterladen',
+        exeWarning: 'Windows zeigt möglicherweise eine Warnung \'Unbekannter Herausgeber\'. Klicke auf \'Weitere Informationen\' → \'Trotzdem ausführen\', um die Installation fortzusetzen.',
       },
       android: {
         title: 'Android App',
