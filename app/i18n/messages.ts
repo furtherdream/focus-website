@@ -79,7 +79,7 @@ type Messages = {
     heading: string
     subheading: string
     chrome: { title: string; description: string; cta: string }
-    windows: { title: string; description: string; cta: string; exeWarning: string }
+    windows: { title: string; description: string; cta: string; exeWarning: string; avWarning: string }
     android: { title: string; description: string; cta: string }
     ios: { title: string; description: string; cta: string }
   }
@@ -220,6 +220,7 @@ export const messages: Record<Locale, Messages> = {
         description: '앱 레벨 차단 포함 · Pro',
         cta: '데스크탑 앱 다운로드',
         exeWarning: 'Windows 가 \'알 수 없는 게시자\' 경고를 띄울 수 있어요. \'추가 정보\' → \'실행\' 클릭하면 설치됩니다.',
+        avWarning: '일부 보안 프로그램(AhnLab, Norton, McAfee 등)이 hosts 파일 변경을 경고할 수 있어요. Flowdive 는 hosts 를 수정해 사이트를 차단합니다. 즉, 안심하셔도 됩니다. \'허용\' (또는 비슷한 옵션) 을 선택해 주세요.',
       },
       android: {
         title: 'Android 앱',
@@ -453,6 +454,7 @@ export const messages: Record<Locale, Messages> = {
         description: 'App-level blocking included · Pro',
         cta: 'Download desktop app',
         exeWarning: 'Windows may show an \'Unknown publisher\' warning. Click \'More info\' → \'Run anyway\' to install.',
+        avWarning: 'Some antivirus or security software (e.g., AhnLab, Norton, McAfee) may show a warning about hosts file changes. Flowdive modifies hosts to block sites — you can safely allow it. Choose \'Allow\' (or a similar option) to proceed.',
       },
       android: {
         title: 'Android App',
@@ -686,6 +688,7 @@ export const messages: Record<Locale, Messages> = {
         description: 'アプリレベルのブロック搭載 · Pro',
         cta: 'デスクトップアプリをダウンロード',
         exeWarning: 'Windows が「不明な発行元」の警告を表示することがあります。「詳細情報」→「実行」をクリックするとインストールできます。',
+        avWarning: '一部のセキュリティソフト（AhnLab、Norton、McAfee など）が hosts ファイル変更の警告を表示することがあります。Flowdive はサイトをブロックするために hosts を変更します。安心して「許可」（または同様の選択肢）を選択してください。',
       },
       android: {
         title: 'Android アプリ',
@@ -918,6 +921,7 @@ export const messages: Record<Locale, Messages> = {
         description: '包含应用级屏蔽 · Pro',
         cta: '下载桌面应用',
         exeWarning: 'Windows 可能会显示「未知发布者」警告。点击「更多信息」→「仍要运行」即可安装。',
+        avWarning: '部分安全软件（如 AhnLab、Norton、McAfee 等）可能会显示 hosts 文件更改警告。Flowdive 通过修改 hosts 来屏蔽网站，可以放心允许。请选择「允许」（或类似选项）。',
       },
       android: {
         title: 'Android 应用',
@@ -1151,6 +1155,7 @@ export const messages: Record<Locale, Messages> = {
         description: 'Incluye bloqueo a nivel de app · Pro',
         cta: 'Descargar app de escritorio',
         exeWarning: 'Windows puede mostrar un aviso de \'Editor desconocido\'. Haz clic en \'Más información\' → \'Ejecutar de todas formas\' para instalar.',
+        avWarning: 'Algunos antivirus (como AhnLab, Norton, McAfee) pueden advertir sobre cambios en el archivo hosts. Flowdive lo modifica para bloquear sitios — puedes permitirlo con tranquilidad. Elige \'Permitir\' (o la opción similar).',
       },
       android: {
         title: 'App de Android',
@@ -1384,6 +1389,7 @@ export const messages: Record<Locale, Messages> = {
         description: 'App-Ebene-Blockierung enthalten · Pro',
         cta: 'Desktop-App herunterladen',
         exeWarning: 'Windows zeigt möglicherweise eine Warnung \'Unbekannter Herausgeber\'. Klicke auf \'Weitere Informationen\' → \'Trotzdem ausführen\', um die Installation fortzusetzen.',
+        avWarning: 'Manche Sicherheitssoftware (z. B. AhnLab, Norton, McAfee) warnt evtl. vor Hosts-Änderungen. Flowdive ändert die Hosts-Datei, um Websites zu blockieren — du kannst es bedenkenlos zulassen. Wähle \'Zulassen\' (oder eine ähnliche Option).',
       },
       android: {
         title: 'Android App',

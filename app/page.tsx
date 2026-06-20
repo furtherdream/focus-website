@@ -492,11 +492,16 @@ export default function Home() {
                 {t.download.windows.cta}
                 <ArrowRight />
               </div>
-              {/* Windows 사용자에게만 SmartScreen 경고 안내 (Mac 사용자는 서명된 .dmg 라 미표시) */}
+              {/* Windows 사용자에게만 SmartScreen + AV 경고 안내 (Mac 사용자는 서명된 .dmg 라 미표시) */}
               {!isMacUser && (
-                <p className="mt-4 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 leading-relaxed">
-                  ⚠️ {t.download.windows.exeWarning}
-                </p>
+                <>
+                  <p className="mt-4 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 leading-relaxed">
+                    ⚠️ {t.download.windows.exeWarning}
+                  </p>
+                  <p className="mt-2 text-xs text-slate-600 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 leading-relaxed">
+                    🛡️ {t.download.windows.avWarning}
+                  </p>
+                </>
               )}
             </a>
             <a
