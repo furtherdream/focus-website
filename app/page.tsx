@@ -63,13 +63,20 @@ function ArrowRight() {
   )
 }
 
+// Flowdive 데스크탑 다운로드 — GitHub Releases 자산 직접 링크
+// 새 버전 출시 시 DESKTOP_VERSION 만 업데이트하면 모든 URL 자동 갱신
+const DESKTOP_VERSION = '1.0.0'
+const RELEASE_BASE = `https://github.com/furtherdream/focus-desktop/releases/download/v${DESKTOP_VERSION}`
 const CHROME_STORE_URL = '#'
-const WINDOWS_DOWNLOAD_URL = '#'
-const MAC_DOWNLOAD_URL = '#'
+const WINDOWS_DOWNLOAD_URL = `${RELEASE_BASE}/Flowdive-Setup-${DESKTOP_VERSION}.exe`
+const MAC_DOWNLOAD_URL = `${RELEASE_BASE}/Flowdive-${DESKTOP_VERSION}-arm64.dmg` // Apple Silicon (M1/M2/M3) 기본
+const MAC_INTEL_DOWNLOAD_URL = `${RELEASE_BASE}/Flowdive-${DESKTOP_VERSION}.dmg` // Intel Mac 폴백
 const ANDROID_DOWNLOAD_URL = '#'
 
 // 사용자 OS 감지 → 데스크탑 다운로드 URL 자동 선택.
 // SSR 시에는 Windows 기본값 (서버에선 navigator 없음), 클라이언트에서 useEffect 로 보정.
+// Mac 의 아키텍처(arm64 vs Intel) 는 UA 만으로 정확히 구분 어려움 — 일단 arm64 기본,
+// Intel Mac 사용자는 카드 아래 작은 링크로 별도 안내.
 function detectDesktopUrl(): string {
   if (typeof navigator === 'undefined') return WINDOWS_DOWNLOAD_URL
   const ua = navigator.userAgent.toLowerCase()
@@ -532,6 +539,20 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* Intel Mac 폴백 — Mac 사용자(주로 Apple Silicon)에게만 보임. 기본 CTA 는 arm64 .dmg,
+              Intel Mac 사용자는 이 링크로 별도 .dmg 받음. UA 만으로 정확한 arch 판정 어려워서
+              두 옵션 다 제공하는 안전책. */}
+          {isMacUser && (
+            <p className="mt-8 text-center text-xs text-slate-500">
+              Intel Mac (older)?{' '}
+              <a
+                href={MAC_INTEL_DOWNLOAD_URL}
+                className="text-violet-600 hover:text-violet-700 underline font-medium"
+              >
+                Download Intel .dmg
+              </a>
+            </p>
+          )}
         </div>
       </section>
 
