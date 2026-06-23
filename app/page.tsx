@@ -66,7 +66,7 @@ function ArrowRight() {
 // Flowdive 데스크탑 다운로드 — GitHub Releases 자산 직접 링크
 // 새 버전 출시 시 DESKTOP_VERSION 만 업데이트하면 모든 URL 자동 갱신
 const DESKTOP_VERSION = '1.0.0'
-const RELEASE_BASE = `https://github.com/furtherdream/focus-desktop/releases/download/v${DESKTOP_VERSION}`
+const RELEASE_BASE = `https://github.com/furtherdream/focus-releases/releases/download/v${DESKTOP_VERSION}`
 const CHROME_STORE_URL = '#'
 const WINDOWS_DOWNLOAD_URL = `${RELEASE_BASE}/Flowdive-Setup-${DESKTOP_VERSION}.exe`
 const MAC_DOWNLOAD_URL = `${RELEASE_BASE}/Flowdive-${DESKTOP_VERSION}-arm64.dmg` // Apple Silicon (M1/M2/M3) 기본
